@@ -29,6 +29,8 @@
                 <a class="navbar-brand" href="week3.html">Week 3</a>
                 <a class="navbar-brand" href="week4.html">Week 4</a>
                 <a class="navbar-brand" href="week5.html">Week 5</a>
+                <a class="navbar-brand" href="week6.html">Week 6</a>
+                <a class='navbar-brand' href='allteamdata.html'>Raw Data</a>
             </nav>
         </div>
     </div>
@@ -51,6 +53,25 @@
     </div>
     <!--ROW 1-->
     <div class='row'>
+        <div class='col-md-1'></div>
+        <div class='col-md-2'>
+            <div class="card">
+                <div class='container2'>
+                    <img src="../images/original_art/pickanalysis.JPG" alt="Avatar" style="width:100%">
+                    <div class="overlay">
+                        <div class="scoretext"><b>
+                            Level 3: 100.0%<br>
+                            Level 2: 66.7%<br>
+                            Level 1: None</b>
+                        </div>
+                    </div>
+                </div>
+                <div class="container" style="background-color:rgb(112, 0, 0)">
+                    <h4 class='text-light'><b>73.3% Accuracy</b></h4>
+                    <p class='text-light'>Week 3</p>
+                </div>
+            </div>
+        </div>
         <div class='col-md-2'>
             <div class="card">
                 <img src="../images/logos/bills.jpg" alt="Avatar" style="width:100%">
@@ -93,6 +114,13 @@
                 </div>
             </div>
         </div>
+        <div class='col-md-1'></div>
+    </div>
+    <div class='row'>
+        <p></p>
+    </div>
+    <!--ROW 2-->
+    <div class='row'>
         <div class='col-md-2'>
             <div class="card">
                 <img src="../images/logos/panthers.jpg" alt="Avatar" style="width:100%">
@@ -117,13 +145,6 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class='row'>
-        <p></p>
-    </div>
-    <!--ROW 2-->
-    <div class='row'>
-        <div class='col-md-1'></div>
         <div class='col-md-2'>
             <div class="card">
                 <div class='container2'>
@@ -150,24 +171,6 @@
         </div>
         <div class='col-md-2'>
             <div class="card">
-                <div class='container2'>
-                    <img src="../images/original_art/pickanalysis.JPG" alt="Avatar" style="width:100%">
-                    <div class="overlay">
-                        <div class="scoretext"><b>
-                            Level 3: 100.0%<br>
-                            Level 2: 66.7%<br>
-                            Level 1: None</b>
-                        </div>
-                    </div>
-                </div>
-                <div class="container" style="background-color:rgb(112, 0, 0)">
-                    <h4 class='text-light'><b>73.3% Accuracy</b></h4>
-                    <p class='text-light'>Week 3</p>
-                </div>
-            </div>
-        </div>
-        <div class='col-md-2'>
-            <div class="card">
                 <img src="../images/logos/niners.jpg" alt="Avatar" style="width:100%">
                 <div class="container">
                 <h4 class='text-dark'><b>49ers</b></h4>
@@ -184,7 +187,6 @@
                 </div>
             </div>
         </div>
-        <div class='col-md-1'></div>
     </div>
     <div class='row'>
         <p></p>
@@ -255,159 +257,6 @@
     <div class="row">
         <div class='col-md-12'>
             <p class="bg-white"></p>
-        </div>
-    </div>
-    <!--All Data Table-->
-    <div class = "row">
-        <div class='col-md-12'>
-            <h1 class="display-4 text-white text-center">Raw Data - All Teams, 2010-2020</h1>
-            <h3 class="display-10 text-white text-center">(All numbers represent how the 'base team' entered the game.)</h3>
-        </div>
-    </div>
-    <!--Table-->
-    <div class = "row">
-        <div class="col-md-3">
-            <form class="bg-dark text-white">
-                <h3 class="text-center">Filter Search</h3>
-                <ul class="list-group bg-dark">
-                    <li class="list-group-item bg-dark">
-                        <label for="Base_Team">Choose a Base Team:</label>
-                        <select name="Base_Team" id="Base_Team">
-                            <option value="">--</option>
-                            <option value="49ers">49ers</option>
-                            <option value="Bears">Bears</option>
-                            <option value="Bengals">Bengals</option>
-                            <option value="Bills">Bills</option>
-                            <option value="Broncos">Broncos</option>
-                            <option value="Browns">Browns</option>
-                            <option value="Buccaneers">Buccaneers</option>
-                            <option value="Cardinals">Cardinals</option>
-                            <option value="Chargers">Chargers</option>
-                            <option value="Chiefs">Chiefs</option>
-                            <option value="Colts">Colts</option>
-                            <option value="Cowboys">Cowboys</option>
-                            <option value="Dolphins">Dolphins</option>
-                            <option value="Eagles">Eagles</option>
-                            <option value="Falcons">Falcons</option>
-                            <option value="Giants">Giants</option>
-                            <option value="Jaguars">Jaguars</option>
-                            <option value="Jets">Jets</option>
-                            <option value="Lions">Lions</option>
-                            <option value="Packers">Packers</option>
-                            <option value="Panthers">Panthers</option>
-                            <option value="Patriots">Patriots</option>
-                            <option value="Raiders">Raiders</option>
-                            <option value="Rams">Rams</option>
-                            <option value="Ravens">Ravens</option>
-                            <option value="Washington">Washington</option>
-                            <option value="Saints">Saints</option>
-                            <option value="Seahawks">Seahawks</option>
-                            <option value="Steelers">Steelers</option>
-                            <option value="Texans">Texans</option>
-                            <option value="Titans">Titans</option>
-                            <option value="Vikings">Vikings</option>
-                        </select>
-                    </li>
-                    <li class="list-group-item bg-dark">
-                        <label for="Opp">Choose an Opponent:</label>
-                        <select name="Opp" id="Opp">
-                            <option value="">--</option>
-                            <option value="49ers">49ers</option>
-                            <option value="Bears">Bears</option>
-                            <option value="Bengals">Bengals</option>
-                            <option value="Bills">Bills</option>
-                            <option value="Broncos">Broncos</option>
-                            <option value="Browns">Browns</option>
-                            <option value="Buccaneers">Buccaneers</option>
-                            <option value="Cardinals">Cardinals</option>
-                            <option value="Chargers">Chargers</option>
-                            <option value="Chiefs">Chiefs</option>
-                            <option value="Colts">Colts</option>
-                            <option value="Cowboys">Cowboys</option>
-                            <option value="Dolphins">Dolphins</option>
-                            <option value="Eagles">Eagles</option>
-                            <option value="Falcons">Falcons</option>
-                            <option value="Giants">Giants</option>
-                            <option value="Jaguars">Jaguars</option>
-                            <option value="Jets">Jets</option>
-                            <option value="Lions">Lions</option>
-                            <option value="Packers">Packers</option>
-                            <option value="Panthers">Panthers</option>
-                            <option value="Patriots">Patriots</option>
-                            <option value="Raiders">Raiders</option>
-                            <option value="Rams">Rams</option>
-                            <option value="Ravens">Ravens</option>
-                            <option value="Washington">Washington</option>
-                            <option value="Saints">Saints</option>
-                            <option value="Seahawks">Seahawks</option>
-                            <option value="Steelers">Steelers</option>
-                            <option value="Texans">Texans</option>
-                            <option value="Titans">Titans</option>
-                            <option value="Vikings">Vikings</option>
-                        </select>
-                    </li>
-                    <li class="list-group-item bg-dark">
-                        <label for="Year">Season:</label>
-                        <select name="Year" id="Year">
-                            <option value="2020">2020</option>
-                        </select>
-                    </li>
-                    <li class="list-group-item bg-dark">
-                        <label for="Week">Week:</label>
-                        <select name="Week" id="Week">
-                            <option value="3">Week 3</option>
-                        </select>
-                    </li>
-                    <li class="list-group-item bg-dark">
-                        <label for="QB">Quarterback</label><br>
-                        <input type="text" placeholder="ex. Jimmy Garoppolo" id="QB" />
-                    </li>
-                    <li class="list-group-item bg-dark">
-                        <label for="HC">Head Coach</label><br>
-                        <input type="text" placeholder="ex. Kyle Shanahan" id="HC" />
-                    </li>
-                    <li class="list-group-item bg-dark">
-                        <button id="filter-btn" onclick="handleFilters()" type="button" class="btn btn-dark">Filter Table</button>
-                    </li>
-                    <li class="list-group-item bg-dark">
-                        <button id="refresh-btn" onclick="buildTable(allteamData)" type="button" class="btn btn-dark">Refresh Table</button>
-                    </li>
-                </ul>
-                <!--END FILTERS-->
-            </form>
-            <br>
-        </div>
-        <div class="col-md-9">
-            <table style="height:600px; width:100%; overflow-y:scroll; display:block" id="allteam-data" class="table table-striped">
-                <thead>
-                    <tr>
-                        <th onmouseover="" style="cursor: pointer" onclick="sortTable(0)">Results</th>
-                        <th onmouseover="" style="cursor: pointer" onclick="sortTable(1)">Year</th>
-                        <th onmouseover="" style="cursor: pointer" onclick="sortTable(2)">Week</th>
-                        <th onmouseover="" style="cursor: pointer" onclick="sortTable(3)">Day</th>
-                        <th onmouseover="" style="cursor: pointer" onclick="sortTable(4)">Base Team</th>
-                        <th onmouseover="" style="cursor: pointer" onclick="sortTable(5)">Opp</th>
-                        <th onmouseover="" style="cursor: pointer" onclick="sortTable(6)">Home</th>
-                        <th onmouseover="" style="cursor: pointer" onclick="sortTable(7)">After Bye</th>
-                        <th onmouseover="" style="cursor: pointer" onclick="sortTable(8)">Wins</th>
-                        <th onmouseover="" style="cursor: pointer" onclick="sortTable(9)">Points For</th>
-                        <th onmouseover="" style="cursor: pointer" onclick="sortTable(10)">Points Against</th>
-                        <th onmouseover="" style="cursor: pointer" onclick="sortTable(11)">Off. Pass</th>
-                        <th onmouseover="" style="cursor: pointer" onclick="sortTable(12)">Off. Rush</th>
-                        <th onmouseover="" style="cursor: pointer" onclick="sortTable(13)">Off. Total</th>
-                        <th onmouseover="" style="cursor: pointer" onclick="sortTable(14)">Turnovers Lost</th>
-                        <th onmouseover="" style="cursor: pointer" onclick="sortTable(15)">Def. Pass</th>
-                        <th onmouseover="" style="cursor: pointer" onclick="sortTable(16)">Def. Rush</th>
-                        <th onmouseover="" style="cursor: pointer" onclick="sortTable(17)">Def. Total</th>
-                        <th onmouseover="" style="cursor: pointer" onclick="sortTable(18)">Turnovers Won</th>
-                        <th onmouseover="" style="cursor: pointer" onclick="sortTable(19)">HC</th>
-                        <th onmouseover="" style="cursor: pointer" onclick="sortTable(20)">OC</th>
-                        <th onmouseover="" style="cursor: pointer" onclick="sortTable(21)">DC</th>
-                        <th onmouseover="" style="cursor: pointer" onclick="sortTable(22)">QB</th>
-                    </tr>
-                </thead>
-                <tbody></tbody>
-            </table>
         </div>
     </div>
     <div class='row'>

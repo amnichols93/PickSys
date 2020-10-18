@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PickSys - Week 6</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+    <style>
+        html, body {
+            max-width: 100%;
+            overflow-x: hidden;
+        }
+    </style>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body class='bg-dark'>
+    <div class="wrapper">
+        <nav class="navbar navbar-dark bg-dark navbar-expand-lg">
+            <a class="navbar-brand" href="../index.html">Home</a>
+            <a class="navbar-brand" href="week1.html">Week 1</a>
+            <a class="navbar-brand" href="week2.html">Week 2</a>
+            <a class="navbar-brand" href="week3.html">Week 3</a>
+            <a class="navbar-brand" href="week4.html">Week 4</a>
+            <a class="navbar-brand" href="week5.html">Week 5</a>
+            <a class="navbar-brand" href="week6.html">Week 6</a>
+            <a class='navbar-brand' href='allteamdata.html'>Raw Data</a>
+        </nav>
+    </div>
+    <div class="jumbotron">
+        <h1 class="display-4 text-white text-center">PickSys</h1>
+        <h3 class="display-8 text-white text-center">Weekly NFL Picks</h3>
+    </div>
+    <div class="row" style='background-color: lightgrey; text-align: center;'>
+        <div class='col-md-12'>
+            <h1 class="display-4 text-dark text-center">Week 6</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class='col-md-12'>
+            <h1 class="display-4 text-dark text-center"></h1>
+        </div>
+    </div>
+    <!--ROW 1-->
+    <div class='row'>
+        <div class='col-md-1'></div>
+        <div class='col-md-2'>
+            <div class="card">
+                <img src="../images/logos/bills.jpg" alt="Avatar" style="width:100%">
+                <div class="container">
+                <h4 class='text-dark'><b>Bills - L2</b></h4>
+                <p class='text-dark'>Chiefs vs. Bills</p>
+                </div>
+            </div>
+        </div>
+        <div class='col-md-2'>
+            <div class="card">
+                <img src="../images/logos/texans.jpg" alt="Avatar" style="width:100%">
+                <div class="container">
+                <h4 class='text-dark'><b>Texans - L3</b></h4>
+                <p class='text-dark'>Texans vs. Titans</p>
+                </div>
+            </div>
+        </div>
+        <div class='col-md-2'>
+            <div class="card">
+                <img src="../images/logos/ravens.jpg" alt="Avatar" style="width:100%">
+                <div class="container">
+                <h4 class='text-dark'><b>Ravens - L2</b></h4>
+                <p class='text-dark'>Ravens vs. Eagles</p>
+                </div>
+            </div>
+        </div>
+        <div class='col-md-2'>
+            <div class="card">
+                <img src="../images/logos/vikings.jpg" alt="Avatar" style="width:100%">
+                <div class="container">
+                <h4 class='text-dark'><b>Vikings - L2</b></h4>
+                <p class='text-dark'>Falcons vs. Vikings</p>
+                </div>
+            </div>
+        </div>
+        <div class='col-md-2'>
+            <div class="card">
+                <img src="../images/logos/steelers.jpg" alt="Avatar" style="width:100%">
+                <div class="container">
+                <h4 class='text-dark'><b>Steelers - L2</b></h4>
+                <p class='text-dark'>Browns vs. Steelers</p>
+                </div>
+            </div>
+        </div>
+        <div class='col-md-1'></div>
+    </div>
+    <div class='row'>
+        <p></p>
+    </div>
+    <!--ROW 2-->
+    <div class='row'>
+        <div class='col-md-1'></div>
+        <div class='col-md-2'>
+            <div class="card">
+                <div class='container2'>
+                    <img src="../images/logos/colts.jpg" alt="Avatar" style="width:100%">
+                    <div class="overlay">
+                        <div class="text">OVERRIDDEN</div>
+                        <div class="subtext">The model chose the Bengals, but in the 2020 season it has consistently underestimated the Colts & overestimated the Bengals.</div>
+                    </div>
+                </div>
+                <div class="container" style="background-color:rgb(112, 0, 0)">
+                    <h4 class='text-light'><b>Colts - L1</b></h4>
+                    <p class='text-light'>Bengals vs. Colts</p>
+                </div>
+            </div>
+        </div>
+        <div class='col-md-2'>
+            <div class="card">
+                <img src="../images/logos/lions.jpg" alt="Avatar" style="width:100%">
+                <div class="container">
+                <h4 class='text-dark'><b>Lions - L2</b></h4>
+                <p class='text-dark'>Lions vs. Jaguars</p>
+                </div>
+            </div>
+        </div>
+        <div class='col-md-2'>
+            <div class="card">
+                <img src="../images/original_art/pickanalysis.JPG" alt="Avatar" style="width:100%">
+                <div class="container">
+                <h4 class='text-dark'><b>85% Confidence</b></h4>
+                <p class='text-dark'>Week 6</p>
+                </div>
+            </div>
+        </div>
+        <div class='col-md-2'>
+            <div class="card">
+                <img src="../images/logos/bears.jpg" alt="Avatar" style="width:100%">
+                <div class="container">
+                <h4 class='text-dark'><b>Bears - L3</b></h4>
+                <p class='text-dark'>Bears vs. Panthers</p>
+                </div>
+            </div>
+        </div>
+        <div class='col-md-2'>
+            <div class="card">
+                <img src="../images/logos/wash.jpg" alt="Avatar" style="width:100%">
+                <div class="container">
+                <h4 class='text-dark'><b>Washington - L2</b></h4>
+                <p class='text-dark'>Washington vs. Giants</p>
+                </div>
+            </div>
+        </div>
+        <div class='col-md-1'></div>
+    </div>
+    <div class='row'>
+        <p></p>
+    </div>
+    <!--ROW 3-->
+    <div class='row'>
+        <div class='col-md-1'></div>
+        <div class='col-md-2'>
+            <div class="card">
+                <img src="../images/logos/dolphins.jpg" alt="Avatar" style="width:100%">
+                <div class="container">
+                <h4 class='text-dark'><b>Dolphins - L2</b></h4>
+                <p class='text-dark'>Dolphins  vs. Jets</p>
+                </div>
+            </div>
+        </div>
+        <div class='col-md-2'>
+            <div class="card">
+                <img src="../images/logos/patriots.jpg" alt="Avatar" style="width:100%">
+                <div class="container">
+                <h4 class='text-dark'><b>Patriots - L2</b></h4>
+                <p class='text-dark'>Patriots vs. Broncos</p>
+                </div>
+            </div>
+        </div>
+        <div class='col-md-2'>
+            <div class="card">
+                <img src="../images/logos/packers.jpg" alt="Avatar" style="width:100%">
+                <div class="container">
+                <h4 class='text-dark'><b>Packers - L2</b></h4>
+                <p class='text-dark'>Packers vs. Buccaneers</p>
+                </div>
+            </div>
+        </div>
+        <div class='col-md-2'>
+            <div class="card">
+                <div class='container2'>
+                    <img src="../images/logos/rams.jpg" alt="Avatar" style="width:100%">
+                    <div class="overlay">
+                        <div class="text">OVERRIDDEN</div>
+                        <div class="subtext">The model chose the 49ers, but the 49ers starting QB situation is too unclear, and 2020 performace is too inconsistent.</div>
+                    </div>
+                </div>
+                <div class="container" style="background-color:rgb(112, 0, 0)">
+                    <h4 class='text-light'><b>Rams - L1</b></h4>
+                    <p class='text-light'>Rams vs. 49ers</p>
+                </div>
+            </div>
+        </div>
+        <div class='col-md-2'>
+            <div class="card">
+                <img src="../images/logos/cardinals.jpg" alt="Avatar" style="width:100%">
+                <div class="container">
+                <h4 class='text-dark'><b>Cardinals - L2</b></h4>
+                <p class='text-dark'>Cardinals vs. Cowboys<br> Pred: AZ 31 DAL 26</p>
+                </div>
+            </div>
+        </div>
+        <div class='col-md-1'></div>
+    </div>
+    <div class="row">
+        <div class='col-md-12'>
+            <p class="bg-white"></p>
+        </div>
+    </div>
+    <div class='row'>
+        <div class='col-md-12'>
+            <p class='text-center'>PickSys does not own any images used to represent a team logo. Last Updated: October 17, 2020</p>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.11.0/d3.js"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="../js/data.js"></script>
+    <script src='../js/week.js'></script>
+</body>
+</html>
