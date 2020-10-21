@@ -1,5 +1,6 @@
 const allteamData = data_current;
 const predData = week7;
+const predDataS = week7S;
 
 // Reference the HTML table using d3
 var tbody = d3.select("tbody");
@@ -162,7 +163,7 @@ function loadTeamsA(n, data) {
 
 for (i = 1; i < 15; i++) {
   loadTeamsA(i, predData)
-  loadTeamsS(i, predData)
+  loadTeamsS(i, predDataS)
 }
 
 document.getElementById("defaultOpen").click()
