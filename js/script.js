@@ -150,6 +150,8 @@ function loadTeamsA(n, data) {
     document.getElementById(`match${n}A`).innerHTML = `${data[n-1].Base_Team} vs. ${data[n-1].Opp}`;
     var team = data[n-1].Prediction.toLowerCase()
     document.getElementById(`prediction-img${n}A`).src = `images/logos/${team}.jpg`;
+  } else if (page == 'accuracydata'| page == 'allteamdata') {
+
   } else {
     var team = document.getElementById(`prediction${n}A`).innerHTML.toLowerCase()
     document.getElementById(`prediction-img${n}A`).src = `../images/logos/${team}.jpg`;
