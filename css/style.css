@@ -18,6 +18,21 @@ body {
     width: 100%;
     background-color: rgb(112, 0, 0);
 }
+
+.winning-card {
+    border-color: rgb(1, 204, 1);
+    border-width: 5px;
+}
+
+.losing-card {
+    border-color: firebrick;
+    border-width: 5px;
+}
+
+.tieing-card {
+    border-color: goldenrod;
+    border-width: 5px;
+}
   
 .image {
     display: block;

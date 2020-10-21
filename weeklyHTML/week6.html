@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PickSys - Week 6</title>
+    <title id='title'>Week 6</title>
     <link
       rel="stylesheet"
       href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
@@ -19,7 +19,7 @@
     </style>
     <link rel="stylesheet" href="../css/style.css">
 </head>
-<body class='bg-dark'>
+<body>
     <div class="wrapper">
         <nav class="navbar navbar-dark bg-dark navbar-expand-lg">
             <a class="navbar-brand" href="../index.html">Home</a>
@@ -29,7 +29,7 @@
             <a class="navbar-brand" href="week4.html">Week 4</a>
             <a class="navbar-brand" href="week5.html">Week 5</a>
             <a class="navbar-brand" href="week6.html">Week 6</a>
-            <a class="navbar-brand" href="../accuracydata.html">Accuracy Data</a>
+            <a class="navbar-brand" href="accuracydata.html">Accuracy Data</a>
             <a class='navbar-brand' href='allteamdata.html'>Raw Data</a>
         </nav>
     </div>
@@ -37,184 +37,451 @@
         <h1 class="display-4 text-white text-center">PickSys</h1>
         <h3 class="display-8 text-white text-center">Weekly NFL Picks</h3>
     </div>
-    <div class="row" style='background-color: lightgrey; text-align: center;'>
-        <div class='col-md-12'>
-            <h1 class="display-4 text-dark text-center">Week 6</h1>
+    <div class="row">
+        <div class='col-md-1'></div>
+        <div class='col-md-10' style='background: linear-gradient(to right, #343A40,#700000,#343A40); text-align: center; border-radius: 15px'>
+            <h1 class="display-4 text-light text-center"><b>Current Picks</b></h1>
         </div>
+        <div class='col-md-1'></div>
+    </div>
+    <div class="row">
+        <div class='col-md-1'></div>
+        <div class='col-md-10' style='background: #f7f7f7ce; border-radius: 15px'>
+            <p class="text-dark text-left" style='font-size: large; margin-left: 50px; margin-top: 10px;'>
+                <b>L3:</b> Prediction agrees with 3 of 3 PickSys metrics - <b>L2:</b> Prediction agrees with 2 of 3 PickSys metrics - <b>L1:</b> Prediction disagrees with the PickSys metrics
+            </p>
+            <p class="text-dark text-center" style='font-size: large; margin-left: 50px; margin-top: 10px;'>
+                <b>Hover</b> over the team logos for any notes from PickSys -- <b>Click</b> the game cards to view the ESPN matchup summary
+            </p>
+        </div>
+        <div class='col-md-1'></div>
     </div>
     <div class="row">
         <div class='col-md-12'>
             <h1 class="display-4 text-dark text-center"></h1>
         </div>
     </div>
-    <!--ROW 1-->
+
+    <!--TABS-->
     <div class='row'>
-        <div class='col-md-1'></div>
+        <div class='col-md-5'></div>
         <div class='col-md-2'>
-            <div class="card">
-                <img src="../images/logos/bills.jpg" alt="Avatar" style="width:100%">
-                <div class="container">
-                <h4 class='text-dark'><b>Bills - L2</b></h4>
-                <p class='text-dark'>Chiefs vs. Bills</p>
-                </div>
+            <div class="tab" style='border-radius: 15px'>
+                <button class="tablinks" style='width: 50%' onclick="openTab(event, 'Algorithm')" id="defaultOpen">Algorithm</button>
+                <button class="tablinks" style='width: 50%' onclick="openTab(event, 'Staff')">Staff</button>
             </div>
         </div>
-        <div class='col-md-2'>
-            <div class="card">
-                <img src="../images/logos/texans.jpg" alt="Avatar" style="width:100%">
-                <div class="container">
-                <h4 class='text-dark'><b>Texans - L3</b></h4>
-                <p class='text-dark'>Texans vs. Titans</p>
-                </div>
-            </div>
-        </div>
-        <div class='col-md-2'>
-            <div class="card">
-                <img src="../images/logos/ravens.jpg" alt="Avatar" style="width:100%">
-                <div class="container">
-                <h4 class='text-dark'><b>Ravens - L2</b></h4>
-                <p class='text-dark'>Ravens vs. Eagles</p>
-                </div>
-            </div>
-        </div>
-        <div class='col-md-2'>
-            <div class="card">
-                <img src="../images/logos/vikings.jpg" alt="Avatar" style="width:100%">
-                <div class="container">
-                <h4 class='text-dark'><b>Vikings - L2</b></h4>
-                <p class='text-dark'>Falcons vs. Vikings</p>
-                </div>
-            </div>
-        </div>
-        <div class='col-md-2'>
-            <div class="card">
-                <img src="../images/logos/steelers.jpg" alt="Avatar" style="width:100%">
-                <div class="container">
-                <h4 class='text-dark'><b>Steelers - L2</b></h4>
-                <p class='text-dark'>Browns vs. Steelers</p>
-                </div>
-            </div>
-        </div>
-        <div class='col-md-1'></div>
+        <div class='col-md-5'></div>
     </div>
-    <div class='row'>
-        <p></p>
+
+    <!--ALGORITHM CHOICES-->
+    <div id='Algorithm' class='tabcontent'>
+        <div class='row'>
+            <div class='col-md-1'></div>
+            <div class='col-md-2'>
+                <div class="card">
+                    <a href='https://www.espn.com/nfl/scoreboard' target="_blank">
+                        <img src="../images/original_art/pickanalysis.JPG" alt="Avatar" style="width:100%">
+                        <div class="container">
+                        <h4 id='pred-acc-perc' class='text-dark'><b>78% Confidence</b></h4>
+                        <p id='pred-acc-week' class='text-dark'>Week 7</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class='col-md-2'>
+                <div class="card">
+                    <a href='' target="_blank">
+                        <div class='container2'>
+                            <img id='prediction-img1A' alt="Avatar" style="width:100%">
+                            <div class='overlay'>
+                                <div class='text'>TITANS WINS</div>
+                                <div class='scoretext'>Titans 42 - OT<br>Texans 36</div>
+                            </div>
+                        </div>
+                        <div class="container">
+                        <h4 class='text-dark' id='prediction1A'>Texans</h4>
+                        <p class='text-dark'>Texans vs. Titans</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class='col-md-2'>
+                <div class="card">
+                    <a href='https://www.espn.com/nfl/game/_/gameId/401220190' target="_blank">
+                        <div class='container2'>
+                            <img id='prediction-img2A' alt="Avatar" style="width:100%">
+                            <div class='overlay'>
+                                <div class='text'>COLTS WINS</div>
+                                <div class='scoretext'>Colts 31<br>Bengals 27</div>
+                            </div>
+                        </div>
+                        <div class="container">
+                        <h4 class='text-dark' id='prediction2A'>Bengals</h4>
+                        <p class='text-dark'>Bengals vs. Colts</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class='col-md-2'>
+                <div class="card">
+                    <a href='https://www.espn.com/nfl/game/_/gameId/401220301' target="_blank">
+                        <img id='prediction-img3A' alt="Avatar" style="width:100%">
+                        <div class="container">
+                        <h4 class='text-dark' id='prediction3A'>Vikings</h4>
+                        <p class='text-dark'>Falcons vs. Vikings</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class='col-md-2'>
+                <div class="card">
+                    <a href='https://www.espn.com/nfl/game/_/gameId/401220133' target="_blank">
+                        <img id='prediction-img4A' alt="Avatar" style="width:100%">
+                        <div class="container">
+                        <h4 class='text-dark' id='prediction4A'>Patriots</h4>
+                        <p class='text-dark'>Broncos vs. Patriots</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class='col-md-1'></div>
+        </div>
+        <div class='row'>
+            <p></p>
+        </div>
+        <!--ROW 2-->
+        <div class='row'>
+            <div class='col-md-1'></div>
+            <div class='col-md-2'>
+                <div class="card">
+                    <a href='https://www.espn.com/nfl/game/_/gameId/401220252' target="_blank">
+                        <img id='prediction-img5A' alt="Avatar" style="width:100%">
+                        <div class="container">
+                        <h4 class='text-dark' id='prediction5A'>Washington</h4>
+                        <p class='text-dark'>Washington vs. Giants</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class='col-md-2'>
+                <div class="card">
+                    <a href='https://www.espn.com/nfl/game/_/gameId/401220263' target="_blank">
+                        <img id='prediction-img6A' alt="Avatar" style="width:100%">
+                        <div class="container">
+                        <h4 class='text-dark' id='prediction6A'>Ravens</h4>
+                        <p class='text-dark'>Ravens vs. Eagles</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class='col-md-2'>
+                <div class="card">
+                    <a href='https://www.espn.com/nfl/game/_/gameId/401220172' target="_blank">
+                        <img id='prediction-img7A' alt="Avatar" style="width:100%">
+                        <div class="container">
+                        <h4 class='text-dark' id='prediction7A'>Steelers</h4>
+                        <p class='text-dark'>Browns vs. Steelers</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class='col-md-2'>
+                <div class="card">
+                    <a href='https://www.espn.com/nfl/game/_/gameId/401220317' target="_blank">
+                        <img id='prediction-img8A' alt="Avatar" style="width:100%">
+                        <div class="container">
+                        <h4 class='text-dark' id='prediction8A'>Bears</h4>
+                        <p class='text-dark'>Bears vs. Panthers</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class='col-md-2'>
+                <div class="card">
+                    <a href='https://www.espn.com/nfl/game/_/gameId/401220200' target="_blank">
+                        <img id='prediction-img9A' alt="Avatar" style="width:100%">
+                        <div class="container">
+                        <h4 class='text-dark' id='prediction9A'>Lions</h4>
+                        <p class='text-dark'>Lions vs. Jaguars</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class='col-md-1'></div>
+        </div>
+        <div class='row'>
+            <p></p>
+        </div>
+        <!--ROW 3-->
+        <div class='row'>
+            <div class='col-md-1'></div>
+            <div class='col-md-2'>
+                <div class="card">
+                    <a href='https://www.espn.com/nfl/game/_/gameId/401220124' target="_blank">
+                        <img id='prediction-img10A' alt="Avatar" style="width:100%">
+                        <div class="container">
+                        <h4 class='text-dark' id='prediction10A'>Dolphins</h4>
+                        <p class='text-dark'>Jets  vs. Dolphins</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class='col-md-2'>
+                <div class="card">
+                    <a href='https://www.espn.com/nfl/game/_/gameId/401220331' target="_blank">
+                        <img id='prediction-img11A' alt="Avatar" style="width:100%">
+                        <div class="container">
+                        <h4 class='text-dark' id='prediction11A'>Packers</h4>
+                        <p class='text-dark'>Packers vs. Buccaneers</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class='col-md-2'>
+                <div class="card">
+                    <a href='https://www.espn.com/nfl/game/_/gameId/401220353' target="_blank">
+                        <img id='prediction-img12A' alt="Avatar" style="width:100%">
+                        <div class="container">
+                            <h4 class='text-dark' id='prediction12A'>49ers</h4>
+                            <p class='text-dark'>Rams vs. 49ers</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class='col-md-2'>
+                <div class="card">
+                    <a href='https://www.espn.com/nfl/game/_/gameId/401220117' target="_blank">
+                        <img id='prediction-img13A' alt="Avatar" style="width:100%">
+                        <div class="container">
+                            <h4 class='text-dark' id='prediction13A'>Bills</h4>
+                            <p class='text-dark'>Chiefs vs. Bills</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class='col-md-2'>
+                <div class="card">
+                    <a href='https://www.espn.com/nfl/game/_/gameId/401220245' target="_blank">
+                        <img id='prediction-img14A' alt="Avatar" style="width:100%">
+                        <div class="container">
+                        <h4 class='text-dark' id='prediction14A'>Cardinals</h4>
+                        <p class='text-dark'>Cardinals vs. Cowboys</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class='col-md-1'></div>
+        </div>
     </div>
-    <!--ROW 2-->
-    <div class='row'>
-        <div class='col-md-1'></div>
-        <div class='col-md-2'>
-            <div class="card">
-                <div class='container2'>
-                    <img src="../images/logos/colts.jpg" alt="Avatar" style="width:100%">
-                    <div class="overlay">
-                        <div class="text">OVERRIDDEN</div>
-                        <div class="subtext">The model chose the Bengals, but in the 2020 season it has consistently underestimated the Colts & overestimated the Bengals.</div>
-                    </div>
-                </div>
-                <div class="container" style="background-color:rgb(112, 0, 0)">
-                    <h4 class='text-light'><b>Colts - L1</b></h4>
-                    <p class='text-light'>Bengals vs. Colts</p>
-                </div>
-            </div>
-        </div>
-        <div class='col-md-2'>
-            <div class="card">
-                <img src="../images/logos/lions.jpg" alt="Avatar" style="width:100%">
-                <div class="container">
-                <h4 class='text-dark'><b>Lions - L2</b></h4>
-                <p class='text-dark'>Lions vs. Jaguars</p>
+
+    <!--STAFF CHOICES-->
+    <div id='Staff' class='tabcontent'>
+        <div class='row'>
+            <div class='col-md-1'></div>
+            <!--CARD 1-->
+            <div class='col-md-2'>
+                <div class="card">
+                    <a href='https://www.espn.com/nfl/scoreboard' target="_blank">
+                        <img src="../images/original_art/pickanalysis.JPG" alt="Avatar" style="width:100%">
+                        <div class="container">
+                        <h4 class='text-dark'><b>85% Confidence</b></h4>
+                        <p class='text-dark'>Week 6</p>
+                        </div>
+                    </a>
                 </div>
             </div>
-        </div>
-        <div class='col-md-2'>
-            <div class="card">
-                <img src="../images/original_art/pickanalysis.JPG" alt="Avatar" style="width:100%">
-                <div class="container">
-                <h4 class='text-dark'><b>85% Confidence</b></h4>
-                <p class='text-dark'>Week 6</p>
+            <!--CARD 2-->
+            <div class='col-md-2'>
+                <div class="card">
+                    <a href='https://www.espn.com/nfl/game/_/gameId/401220202' target="_blank">
+                        <div class='container2'>
+                            <img id='prediction-img1S' alt="Avatar" style="width:100%">
+                            <div class='overlay'>
+                                <div class='text'>TITANS WINS</div>
+                                <div class='scoretext'>Titans 42 - OT<br>Texans 36</div>
+                            </div>
+                        </div>
+                        <div class="container">
+                        <h4 class='text-dark' id='prediction1S'>Texans</h4>
+                        <p class='text-dark'>Texans vs. Titans</p>
+                        </div>
+                    </a>
                 </div>
             </div>
-        </div>
-        <div class='col-md-2'>
-            <div class="card">
-                <img src="../images/logos/bears.jpg" alt="Avatar" style="width:100%">
-                <div class="container">
-                <h4 class='text-dark'><b>Bears - L3</b></h4>
-                <p class='text-dark'>Bears vs. Panthers</p>
+            <!--CARD 3-->
+            <div class='col-md-2'>
+                <div class="card">
+                    <a href='https://www.espn.com/nfl/game/_/gameId/401220190' target="_blank">
+                        <div class='container2'>
+                            <img id='prediction-img2S' alt="Avatar" style="width:100%">
+                            <div class='overlay'>
+                                <div class='text'>COLTS WINS</div>
+                                <div class='scoretext'>Colts 31<br>Bengals 27</div>
+                            </div>
+                        </div>
+                        <div class="container" style="background-color:rgb(112, 0, 0)">
+                        <h4 class='text-light' id='prediction2S'>Colts</h4>
+                        <p class='text-light'>Bengals vs. Colts</p>
+                        </div>
+                    </a>
                 </div>
             </div>
-        </div>
-        <div class='col-md-2'>
-            <div class="card">
-                <img src="../images/logos/wash.jpg" alt="Avatar" style="width:100%">
-                <div class="container">
-                <h4 class='text-dark'><b>Washington - L2</b></h4>
-                <p class='text-dark'>Washington vs. Giants</p>
+            <!--CARD 4-->
+            <div class='col-md-2'>
+                <div class="card">
+                    <a href='https://www.espn.com/nfl/game/_/gameId/401220301' target="_blank">
+                        <img id='prediction-img3S' alt="Avatar" style="width:100%">
+                        <div class="container">
+                        <h4 class='text-dark' id='prediction3S'>Vikings</h4>
+                        <p class='text-dark'>Falcons vs. Vikings</p>
+                        </div>
+                    </a>
                 </div>
             </div>
+            <!--CARD 5-->
+            <div class='col-md-2'>
+                <div class="card">
+                    <a href='https://www.espn.com/nfl/game/_/gameId/401220133' target="_blank">
+                        <img id='prediction-img4S' alt="Avatar" style="width:100%">
+                        <div class="container">
+                        <h4 class='text-dark' id='prediction4S'>Patriots</h4>
+                        <p class='text-dark'>Broncos vs. Patriots</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class='col-md-1'></div>
         </div>
-        <div class='col-md-1'></div>
+        <div class='row'>
+            <p></p>
+        </div>
+        <!--ROW 2-->
+        <div class='row'>
+            <div class='col-md-1'></div>
+            <div class='col-md-2'>
+                <div class="card">
+                    <a href='https://www.espn.com/nfl/game/_/gameId/401220252' target="_blank">
+                        <img id='prediction-img5S' alt="Avatar" style="width:100%">
+                        <div class="container">
+                        <h4 class='text-dark' id='prediction5S'>Washington</h4>
+                        <p class='text-dark'>Washington vs. Giants</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class='col-md-2'>
+                <div class="card">
+                    <a href='https://www.espn.com/nfl/game/_/gameId/401220263' target="_blank">
+                        <img id='prediction-img6S' alt="Avatar" style="width:100%">
+                        <div class="container">
+                        <h4 class='text-dark' id='prediction6S'>Ravens</h4>
+                        <p class='text-dark'>Ravens vs. Eagles</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class='col-md-2'>
+                <div class="card">
+                    <a href='https://www.espn.com/nfl/game/_/gameId/401220172' target="_blank">
+                        <img id='prediction-img7S' alt="Avatar" style="width:100%">
+                        <div class="container">
+                        <h4 class='text-dark' id='prediction7S'>Steelers</h4>
+                        <p class='text-dark'>Browns vs. Steelers</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class='col-md-2'>
+                <div class="card">
+                    <a href='https://www.espn.com/nfl/game/_/gameId/401220317' target="_blank">
+                        <img id='prediction-img8S' alt="Avatar" style="width:100%">
+                        <div class="container">
+                        <h4 class='text-dark' id='prediction8S'>Bears</h4>
+                        <p class='text-dark'>Bears vs. Panthers</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class='col-md-2'>
+                <div class="card">
+                    <a href='https://www.espn.com/nfl/game/_/gameId/401220200' target="_blank">
+                        <img id='prediction-img9S' alt="Avatar" style="width:100%">
+                        <div class="container">
+                        <h4 class='text-dark' id='prediction9S'>Lions</h4>
+                        <p class='text-dark'>Lions vs. Jaguars</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class='col-md-1'></div>
+        </div>
+        <div class='row'>
+            <p></p>
+        </div>
+        <!--ROW 3-->
+        <div class='row'>
+            <div class='col-md-1'></div>
+            <div class='col-md-2'>
+                <div class="card">
+                    <a href='https://www.espn.com/nfl/game/_/gameId/401220124' target="_blank">
+                        <img id='prediction-img10S' alt="Avatar" style="width:100%">
+                        <div class="container">
+                        <h4 class='text-dark' id='prediction10S'>Dolphins</h4>
+                        <p class='text-dark'>Jets  vs. Dolphins</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class='col-md-2'>
+                <div class="card">
+                    <a href='https://www.espn.com/nfl/game/_/gameId/401220331' target="_blank">
+                        <img id='prediction-img11S' alt="Avatar" style="width:100%">
+                        <div class="container">
+                        <h4 class='text-dark' id='prediction11S'>Packers</h4>
+                        <p class='text-dark'>Packers vs. Buccaneers</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class='col-md-2'>
+                <div class="card">
+                    <a href='https://www.espn.com/nfl/game/_/gameId/401220353' target="_blank">
+                        <img id='prediction-img12S' alt="Avatar" style="width:100%">
+                        <div class="container" style="background-color:rgb(112, 0, 0)">
+                            <h4 class='text-light' id='prediction12S'>Rams</h4>
+                            <p class='text-light'>Rams vs. 49ers</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class='col-md-2'>
+                <div class="card">
+                    <a href='https://www.espn.com/nfl/game/_/gameId/401220117' target="_blank">
+                        <img id='prediction-img13S' alt="Avatar" style="width:100%">
+                        <div class="container">
+                            <h4 class='text-dark' id='prediction13S'>Bills</h4>
+                            <p class='text-dark'>Chiefs vs. Bills</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class='col-md-2'>
+                <div class="card">
+                    <a href='https://www.espn.com/nfl/game/_/gameId/401220245' target="_blank">
+                        <img id='prediction-img14S' alt="Avatar" style="width:100%">
+                        <div class="container">
+                        <h4 class='text-dark' id='prediction14S'>Cardinals</h4>
+                        <p class='text-dark'>Cardinals vs. Cowboys</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class='col-md-1'></div>
+        </div>
     </div>
-    <div class='row'>
-        <p></p>
-    </div>
-    <!--ROW 3-->
-    <div class='row'>
-        <div class='col-md-1'></div>
-        <div class='col-md-2'>
-            <div class="card">
-                <img src="../images/logos/dolphins.jpg" alt="Avatar" style="width:100%">
-                <div class="container">
-                <h4 class='text-dark'><b>Dolphins - L2</b></h4>
-                <p class='text-dark'>Dolphins  vs. Jets</p>
-                </div>
-            </div>
-        </div>
-        <div class='col-md-2'>
-            <div class="card">
-                <img src="../images/logos/patriots.jpg" alt="Avatar" style="width:100%">
-                <div class="container">
-                <h4 class='text-dark'><b>Patriots - L2</b></h4>
-                <p class='text-dark'>Patriots vs. Broncos</p>
-                </div>
-            </div>
-        </div>
-        <div class='col-md-2'>
-            <div class="card">
-                <img src="../images/logos/packers.jpg" alt="Avatar" style="width:100%">
-                <div class="container">
-                <h4 class='text-dark'><b>Packers - L2</b></h4>
-                <p class='text-dark'>Packers vs. Buccaneers</p>
-                </div>
-            </div>
-        </div>
-        <div class='col-md-2'>
-            <div class="card">
-                <div class='container2'>
-                    <img src="../images/logos/rams.jpg" alt="Avatar" style="width:100%">
-                    <div class="overlay">
-                        <div class="text">OVERRIDDEN</div>
-                        <div class="subtext">The model chose the 49ers, but the 49ers starting QB situation is too unclear, and 2020 performace is too inconsistent.</div>
-                    </div>
-                </div>
-                <div class="container" style="background-color:rgb(112, 0, 0)">
-                    <h4 class='text-light'><b>Rams - L1</b></h4>
-                    <p class='text-light'>Rams vs. 49ers</p>
-                </div>
-            </div>
-        </div>
-        <div class='col-md-2'>
-            <div class="card">
-                <img src="../images/logos/cardinals.jpg" alt="Avatar" style="width:100%">
-                <div class="container">
-                <h4 class='text-dark'><b>Cardinals - L2</b></h4>
-                <p class='text-dark'>Cardinals vs. Cowboys<br> Pred: AZ 31 DAL 26</p>
-                </div>
-            </div>
-        </div>
-        <div class='col-md-1'></div>
-    </div>
+
+
     <div class="row">
         <div class='col-md-12'>
             <p class="bg-white"></p>
@@ -228,6 +495,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.11.0/d3.js"></script>
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
     <script src="../js/data.js"></script>
-    <script src='../js/week.js'></script>
+    <script src='../js/predictions.js'></script>
+    <script src='../js/script.js'></script>
 </body>
 </html>

@@ -1,4 +1,5 @@
 const allteamData = data_current;
+const predData = week7;
 
 // Reference the HTML table using d3
 var tbody = d3.select("tbody");
@@ -127,6 +128,34 @@ function openTab(evt, pickType) {
     // Show the current tab, and add an "active" class to the button that opened the tab
     document.getElementById(pickType).style.display = "block";
     evt.currentTarget.className += " active";
+}
+
+function loadTeamsS(n, data) {
+  var page = document.getElementById('title').innerHTML.toLowerCase()
+  if (page == 'picksys') {  
+    document.getElementById(`prediction${n}S`).innerHTML = `${data[n-1].Prediction}`;
+    document.getElementById(`match${n}S`).innerHTML = `${data[n-1].Base_Team} vs. ${data[n-1].Opp}`;
+    document.getElementById(`prediction-img${n}S`).src = `images/logos/${data[n-1].Prediction}.jpg`;
+  } else {
+    var team = document.getElementById(`prediction${n}S`).innerHTML.toLowerCase()
+    document.getElementById(`prediction-img${n}S`).src = `../images/logos/${team}.jpg`;
+  }
+}
+
+function loadTeamsA(n, data) {
+  var page = document.getElementById('title').innerHTML.toLowerCase()
+  if (page == 'picksys') {  
+    document.getElementById(`prediction${n}A`).innerHTML = `${data[n-1].Prediction}`;
+    document.getElementById(`match${n}A`).innerHTML = `${data[n-1].Base_Team} vs. ${data[n-1].Opp}`;
+    document.getElementById(`prediction-img${n}A`).src = `images/logos/${data[n-1].Prediction}.jpg`;
+  } else {
+    var team = document.getElementById(`prediction${n}A`).innerHTML.toLowerCase()
+    document.getElementById(`prediction-img${n}A`).src = `../images/logos/${team}.jpg`;
+  }
+}
+
+for (i = 1; i < 15; i++) {
+  loadTeamsA(i, predData)
 }
 
 document.getElementById("defaultOpen").click()
