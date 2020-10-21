@@ -133,7 +133,7 @@ function openTab(evt, pickType) {
 function loadTeamsS(n, data) {
   var page = document.getElementById('title').innerHTML.toLowerCase()
   if (page == 'picksys') {  
-    document.getElementById(`prediction${n}S`).innerHTML = `${data[n-1].Prediction}`;
+    document.getElementById(`prediction${n}S`).innerHTML = `${data[n-1].Prediction} - ${data[n-1].Level}`;
     document.getElementById(`match${n}S`).innerHTML = `${data[n-1].Base_Team} vs. ${data[n-1].Opp}`;
     var team = data[n-1].Prediction.toLowerCase()
     document.getElementById(`prediction-img${n}S`).src = `images/logos/${team}.jpg`;
@@ -158,24 +158,10 @@ function loadTeamsA(n, data) {
 
 for (i = 1; i < 15; i++) {
   loadTeamsA(i, predData)
+  loadTeamsS(i, predData)
 }
 
 document.getElementById("defaultOpen").click()
-
-var slideIndex = [1,1,1,1,1,1,1,1,1,1,1,1];
-var slideId = ["mySlides0", "mySlides1", "mySlides2", "mySlides3", "mySlides4", "mySlides5", "mySlides6", "mySlides7", "mySlides8", "mySlides9", "mySlides10", "mySlides11"]
-showDivs(1, 0);
-showDivs(1, 1);
-showDivs(1, 2);
-showDivs(1, 3);
-showDivs(1, 4);
-showDivs(1, 5);
-showDivs(1, 6);
-showDivs(1, 7);
-showDivs(1, 8);
-showDivs(1, 9);
-showDivs(1, 10);
-showDivs(1, 11);
 
 function plusDivs(n, no) {
   showDivs(slideIndex[no] += n, no);
@@ -191,5 +177,20 @@ function showDivs(n, no) {
   }
   x[slideIndex[no]-1].style.display = "block";  
 }
+
+var slideIndex = [1,1,1,1,1,1,1,1,1,1,1,1];
+var slideId = ["mySlides0", "mySlides1", "mySlides2", "mySlides3", "mySlides4", "mySlides5", "mySlides6", "mySlides7", "mySlides8", "mySlides9", "mySlides10", "mySlides11"]
+showDivs(1, 0);
+showDivs(1, 1);
+showDivs(1, 2);
+showDivs(1, 3);
+showDivs(1, 4);
+showDivs(1, 5);
+showDivs(1, 6);
+showDivs(1, 7);
+showDivs(1, 8);
+showDivs(1, 9);
+showDivs(1, 10);
+showDivs(1, 11);
 
 buildTable(allteamData);
