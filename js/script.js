@@ -145,7 +145,7 @@ function loadTeamsS(n, data) {
 function loadTeamsA(n, data) {
   var page = document.getElementById('title').innerHTML.toLowerCase()
   if (page == 'picksys') {  
-    document.getElementById(`prediction${n}A`).innerHTML = `${data[n-1].Prediction}`;
+    document.getElementById(`prediction${n}A`).innerHTML = `${data[n-1].Prediction} - ${data[n-1].Level}`;
     document.getElementById(`match${n}A`).innerHTML = `${data[n-1].Base_Team} vs. ${data[n-1].Opp}`;
     document.getElementById(`prediction-img${n}A`).src = `images/logos/${data[n-1].Prediction}.jpg`;
   } else {
