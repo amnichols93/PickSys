@@ -135,7 +135,8 @@ function loadTeamsS(n, data) {
   if (page == 'picksys') {  
     document.getElementById(`prediction${n}S`).innerHTML = `${data[n-1].Prediction}`;
     document.getElementById(`match${n}S`).innerHTML = `${data[n-1].Base_Team} vs. ${data[n-1].Opp}`;
-    document.getElementById(`prediction-img${n}S`).src = `images/logos/${data[n-1].Prediction}.jpg`;
+    var team = data[n-1].Prediction.toLowerCase()
+    document.getElementById(`prediction-img${n}S`).src = `images/logos/${team}.jpg`;
   } else {
     var team = document.getElementById(`prediction${n}S`).innerHTML.toLowerCase()
     document.getElementById(`prediction-img${n}S`).src = `../images/logos/${team}.jpg`;
@@ -147,7 +148,7 @@ function loadTeamsA(n, data) {
   if (page == 'picksys') {  
     document.getElementById(`prediction${n}A`).innerHTML = `${data[n-1].Prediction} - ${data[n-1].Level}`;
     document.getElementById(`match${n}A`).innerHTML = `${data[n-1].Base_Team} vs. ${data[n-1].Opp}`;
-    var team = document.getElementById(`prediction${n}A`).innerHTML.toLowerCase()
+    var team = data[n-1].Prediction.toLowerCase()
     document.getElementById(`prediction-img${n}A`).src = `images/logos/${team}.jpg`;
   } else {
     var team = document.getElementById(`prediction${n}A`).innerHTML.toLowerCase()
