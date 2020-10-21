@@ -137,6 +137,8 @@ function loadTeamsS(n, data) {
     document.getElementById(`match${n}S`).innerHTML = `${data[n-1].Base_Team} vs. ${data[n-1].Opp}`;
     var team = data[n-1].Prediction.toLowerCase()
     document.getElementById(`prediction-img${n}S`).src = `images/logos/${team}.jpg`;
+  } else if (page == 'accuracydata'| page == 'allteamdata') {
+
   } else {
     var team = document.getElementById(`prediction${n}S`).innerHTML.toLowerCase()
     document.getElementById(`prediction-img${n}S`).src = `../images/logos/${team}.jpg`;
