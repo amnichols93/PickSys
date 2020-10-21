@@ -1,6 +1,7 @@
 const allteamData = data_current;
 const predData = week7;
 const predDataS = week7S;
+const level_accData = level_acc;
 
 // Reference the HTML table using d3
 var tbody = d3.select("tbody");
@@ -160,6 +161,18 @@ function loadTeamsA(n, data) {
     document.getElementById(`prediction-img${n}A`).src = `../images/logos/${team}.jpg`;
   }
 }
+
+function levelAcc(data) {
+  var page = document.getElementById('title').innerHTML.toLowerCase()
+  console.log(page)
+  if (page == 'picksys') {
+    document.getElementById('accratings').innerHTML = `${data[0].Year} Model 1 Accuracy Rating:<br>L3: ${data[0].Agree3_Accuracy}% (${data[0].Agree3_Right}/${data[0].Agree3_Total}) - 
+    L2: ${data[0].Agree2_Accuracy}% (${data[0].Agree2_Right}/${data[0].Agree2_Total}) - 
+    Total: ${((data[0].Agree2_Right+data[0].Agree3_Right)/(data[0].Agree2_Total+data[0].Agree3_Total)*100).toFixed(2)}%`;
+  } else {}
+}
+
+levelAcc(level_accData)
 
 for (i = 1; i < 15; i++) {
   loadTeamsA(i, predData)

@@ -1,3 +1,15 @@
+var level_acc = [
+  {
+    Year: 2020,
+    Agree3_Right: 18,
+    Agree3_Total: 20,
+    Agree3_Accuracy: 90,
+    Agree2_Right: 44,
+    Agree2_Total: 59,
+    Agree2_Accuracy: 74.58
+  }
+]
+
 var week7 = [
     {
       Year: 2020,
