@@ -165,9 +165,7 @@ for (i = 1; i < 15; i++) {
   loadTeamsS(i, predData)
 }
 
-if (document.getElementById('title').innerHTML.toLowerCase() == 'accuracydata') {
-  document.getElementById("defaultOpen").click()
-}
+document.getElementById("defaultOpen").click()
 
 function plusDivs(n, no) {
   showDivs(slideIndex[no] += n, no);
