@@ -40,8 +40,8 @@
     <div class="row">
         <div class='col-md-1'></div>
         <div class='col-md-10' style='background: linear-gradient(to right, #343A40,#700000,#343A40); text-align: center; border-radius: 15px'>
-            <h1 class="display-5 text-light text-center" id='accratings'></h1>
-            <p class="text-light text-center" style='font-size: larger;'>(Model 2 Accuracy Data: Pending)</p>
+            <h1 class="display-8 text-light text-center">Model 1 Accuracy Rating:</h1>
+            <h3 class="display-8 text-light text-center" id='accratings'></h3>
         </div>
         <div class='col-md-1'></div>
     </div>
@@ -49,7 +49,7 @@
         <div class='col-md-1'></div>
         <div class='col-md-10' style='background: #f7f7f7ce; border-radius: 15px'>
             <p class="text-dark text-left" style='font-size: large; margin-left: 50px; margin-top: 10px;'>
-                <b>L3:</b> Prediction agrees with 3 of 3 PickSys metrics - <b>L2:</b> Prediction agrees with 2 of 3 PickSys metrics - <b>L1:</b> Prediction disagrees with the PickSys metrics
+                <b>L3:</b> Prediction agrees with 3 of 3 PickSys metrics - <b>L2:</b> Prediction agrees with 2 of 3 PickSys metrics - <b>L1:</b> Prediction agrees with 1 of 3 PickSys metrics
             </p>
             <p class="text-dark text-center" style='font-size: large; margin-left: 50px; margin-top: 10px;'>
                 <b>Hover</b> over the team logos for any notes from PickSys -- <b>Click</b> the game cards to view the ESPN matchup summary
@@ -81,11 +81,11 @@
             <div class='col-md-1'></div>
             <!--CARD 1-->
             <div class='col-md-2'>
-                <div class="card">
-                    <a href='https://www.espn.com/nfl/scoreboard/_/year/2020/seasontype/2/week/7' target="_blank">
+                <div id='card0A' class='card'>
+                    <a id='link-to-espn' target="_blank">
                         <img src="images/original_art/pickanalysis.JPG" alt="Avatar" style="width:100%">
                         <div class="container">
-                        <h4 id='pred-acc-perc' class='text-dark'><b>78% Confidence</b></h4>
+                        <h4 id='pred-acc-perc' class='text-dark'></h4>
                         <p id='pred-acc-week' class='text-dark'>Week 7</p>
                         </div>
                     </a>
@@ -93,7 +93,7 @@
             </div>
             <!--CARD 2-->
             <div class='col-md-2'>
-                <div class="card">
+                <div id='card1A'>
                     <a href='' target="_blank">
                         <img id='prediction-img1A' alt="Avatar" style="width:100%">
                         <div class="container">
@@ -105,7 +105,7 @@
             </div>
             <!--CARD 3-->
             <div class='col-md-2'>
-                <div class="card">
+                <div id='card2A'>
                     <a href='' target="_blank">
                         <img id='prediction-img2A' alt="Avatar" style="width:100%">
                         <div class="container">
@@ -117,7 +117,7 @@
             </div>
             <!--CARD 4-->
             <div class='col-md-2'>
-                <div class="card">
+                <div id='card3A'>
                     <a href='' target="_blank">
                         <img id='prediction-img3A' alt="Avatar" style="width:100%">
                         <div class="container">
@@ -129,7 +129,7 @@
             </div>
             <!--CARD 5-->
             <div class='col-md-2'>
-                <div class="card">
+                <div id='card4A'>
                     <a href='' target="_blank">
                         <img id='prediction-img4A' alt="Avatar" style="width:100%">
                         <div class="container">
@@ -149,7 +149,7 @@
             <div class='col-md-1'></div>
             <!--CARD 6-->
             <div class='col-md-2'>
-                <div class="card">
+                <div id='card5A'>
                     <a href='' target="_blank">
                         <img id='prediction-img5A' alt="Avatar" style="width:100%">
                         <div class="container">
@@ -161,7 +161,7 @@
             </div>
             <!--CARD 7-->
             <div class='col-md-2'>
-                <div class="card">
+                <div id='card6A'>
                     <a href='' target="_blank">
                         <img id='prediction-img6A' alt="Avatar" style="width:100%">
                         <div class="container">
@@ -173,7 +173,7 @@
             </div>
             <!--CARD 8-->
             <div class='col-md-2'>
-                <div class="card">
+                <div id='card7A'>
                     <a href='' target="_blank">
                         <img id='prediction-img7A' alt="Avatar" style="width:100%">
                         <div class="container">
@@ -185,7 +185,7 @@
             </div>
             <!--CARD 9-->
             <div class='col-md-2'>
-                <div class="card">
+                <div id='card8A'>
                     <a href='' target="_blank">
                         <img id='prediction-img8A' alt="Avatar" style="width:100%">
                         <div class="container">
@@ -197,7 +197,7 @@
             </div>
             <!--CARD 10-->
             <div class='col-md-2'>
-                <div class="card">
+                <div id='card9A'>
                     <a href='' target="_blank">
                         <img id='prediction-img9A' alt="Avatar" style="width:100%">
                         <div class="container">
@@ -217,7 +217,7 @@
             <div class='col-md-1'></div>
             <!--CARD 11-->
             <div class='col-md-2'>
-                <div class="card">
+                <div id='card10A'>
                     <a href='' target="_blank">
                         <img id='prediction-img10A' alt="Avatar" style="width:100%">
                         <div class="container">
@@ -229,7 +229,7 @@
             </div>
             <!--CARD 12-->
             <div class='col-md-2'>
-                <div class="card">
+                <div id='card11A'>
                     <a href='' target="_blank">
                         <img id='prediction-img11A' alt="Avatar" style="width:100%">
                         <div class="container">
@@ -241,7 +241,7 @@
             </div>
             <!--CARD 13-->
             <div class='col-md-2'>
-                <div class="card">
+                <div id='card12A'>
                     <a href='' target="_blank">
                         <img id='prediction-img12A' alt="Avatar" style="width:100%">
                         <div class="container">
@@ -253,7 +253,7 @@
             </div>
             <!--CARD 14-->
             <div class='col-md-2'>
-                <div class="card">
+                <div id='card13A'>
                     <a href='' target="_blank">
                         <img id='prediction-img13A' alt="Avatar" style="width:100%">
                         <div class="container">
@@ -265,7 +265,7 @@
             </div>
             <!--CARD 15-->
             <div class='col-md-2'>
-                <div class="card">
+                <div id='card14A'>
                     <a href='' target="_blank">
                         <img id='prediction-img14A' alt="Avatar" style="width:100%">
                         <div class="container">
@@ -284,29 +284,29 @@
         <div class='row'>
             <div class='col-md-1'></div>
             <div class='col-md-2'>
-                <div class="card">
+                <div id='card0S' class='card'>
                     <a href='https://www.espn.com/nfl/scoreboard/_/year/2020/seasontype/2/week/7' target="_blank">
                         <img src="images/original_art/pickanalysis.JPG" alt="Avatar" style="width:100%">
                         <div class="container">
-                        <h4 class='text-dark'><b>78% Confidence</b></h4>
-                        <p class='text-dark'>Week 7</p>
+                        <h4 id='pred-acc-percS' class='text-dark'></h4>
+                        <p id='pred-acc-weekS' class='text-dark'>Week 7</p>
                         </div>
                     </a>
                 </div>
             </div>
             <div class='col-md-2'>
-                <div class="card">
+                <div id='card1S'>
                     <a href='' target="_blank">
                         <img id='prediction-img1S' alt="Avatar" style="width:100%">
                         <div class="container">
-                        <h4 class='text-dark' id='prediction1S'>Texans</h4>
-                        <p class='text-dark' id='match1S'>Texans vs. Titans</p>
+                        <h4 class='text-dark' id='prediction1S'></h4>
+                        <p class='text-dark' id='match1S'></p>
                         </div>
                     </a>
                 </div>
             </div>
             <div class='col-md-2'>
-                <div class="card">
+                <div id='card2S'>
                     <a href='' target="_blank">
                         <img id='prediction-img2S' alt="Avatar" style="width:100%">
                         <!--style="background-color:rgb(112, 0, 0)"-->
@@ -318,7 +318,7 @@
                 </div>
             </div>
             <div class='col-md-2'>
-                <div class="card">
+                <div id='card3S'>
                     <a href='' target="_blank">
                         <img id='prediction-img3S' alt="Avatar" style="width:100%">
                         <div class="container">
@@ -329,7 +329,7 @@
                 </div>
             </div>
             <div class='col-md-2'>
-                <div class="card">
+                <div id='card4S'>
                     <a href='' target="_blank">
                         <img id='prediction-img4S' alt="Avatar" style="width:100%">
                         <div class="container">
@@ -348,7 +348,7 @@
         <div class='row'>
             <div class='col-md-1'></div>
             <div class='col-md-2'>
-                <div class="card">
+                <div id='card5S'>
                     <a href='' target="_blank">
                         <img id='prediction-img5S' alt="Avatar" style="width:100%">
                         <div class="container">
@@ -359,7 +359,7 @@
                 </div>
             </div>
             <div class='col-md-2'>
-                <div class="card">
+                <div id='card6S'>
                     <a href='' target="_blank">
                         <img id='prediction-img6S' alt="Avatar" style="width:100%">
                         <div class="container">
@@ -370,7 +370,7 @@
                 </div>
             </div>
             <div class='col-md-2'>
-                <div class="card">
+                <div id='card7S'>
                     <a href='' target="_blank">
                         <img id='prediction-img7S' alt="Avatar" style="width:100%">
                         <div class="container">
@@ -381,7 +381,7 @@
                 </div>
             </div>
             <div class='col-md-2'>
-                <div class="card">
+                <div id='card8S'>
                     <a href='' target="_blank">
                         <img id='prediction-img8S' alt="Avatar" style="width:100%">
                         <div class="container">
@@ -392,7 +392,7 @@
                 </div>
             </div>
             <div class='col-md-2'>
-                <div class="card">
+                <div id='card9S'>
                     <a href='' target="_blank">
                         <img id='prediction-img9S' alt="Avatar" style="width:100%">
                         <div class="container">
@@ -411,7 +411,7 @@
         <div class='row'>
             <div class='col-md-1'></div>
             <div class='col-md-2'>
-                <div class="card">
+                <div id='card10S'>
                     <a href='' target="_blank">
                         <img id='prediction-img10S' alt="Avatar" style="width:100%">
                         <div class="container">
@@ -422,7 +422,7 @@
                 </div>
             </div>
             <div class='col-md-2'>
-                <div class="card">
+                <div id='card11S'>
                     <a href='' target="_blank">
                         <img id='prediction-img11S' alt="Avatar" style="width:100%">
                         <div class="container">
@@ -433,7 +433,7 @@
                 </div>
             </div>
             <div class='col-md-2'>
-                <div class="card">
+                <div id='card12S'>
                     <a href='' target="_blank">
                         <img id='prediction-img12S' alt="Avatar" style="width:100%">
                         <div class="container">
@@ -444,7 +444,7 @@
                 </div>
             </div>
             <div class='col-md-2'>
-                <div class="card">
+                <div id='card13S'>
                     <a href='' target="_blank">
                         <img id='prediction-img13S' alt="Avatar" style="width:100%">
                         <div class="container">
@@ -455,7 +455,7 @@
                 </div>
             </div>
             <div class='col-md-2'>
-                <div class="card">
+                <div id='card14S'>
                     <a href='' target="_blank">
                         <img id='prediction-img14S' alt="Avatar" style="width:100%">
                         <div class="container">
@@ -477,7 +477,7 @@
     </div>
     <div class='row'>
         <div class='col-md-12'>
-            <p class='text-center'>PickSys does not own any images used to represent a team logo. Last Updated: October 17, 2020</p>
+            <p class='text-center'>PickSys does not own any images used to represent a team logo. Last Updated: October 22, 2020</p>
         </div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.11.0/d3.js"></script>

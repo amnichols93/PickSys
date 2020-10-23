@@ -1,6 +1,6 @@
 const allteamData = data_current;
-const predData = week7;
-const predDataS = week7S;
+const predData = total_pred;
+const predDataS = total_predS;
 const level_accData = level_acc;
 
 // Reference the HTML table using d3
@@ -132,52 +132,453 @@ function openTab(evt, pickType) {
     evt.currentTarget.className += " active";
 }
 
-function loadTeamsS(n, data) {
+function loadTeamsA(data) {
   var page = document.getElementById('title').innerHTML.toLowerCase()
-  if (page == 'picksys') {  
-    document.getElementById(`prediction${n}S`).innerHTML = `${data[n-1].Prediction} - ${data[n-1].Level}`;
-    document.getElementById(`match${n}S`).innerHTML = `${data[n-1].Base_Team} vs. ${data[n-1].Opp}`;
-    var team = data[n-1].Prediction.toLowerCase()
-    document.getElementById(`prediction-img${n}S`).src = `images/logos/${team}.jpg`;
-  } else if (page == 'accuracydata'| page == 'allteamdata') {
-
-  } else {
-    var team = document.getElementById(`prediction${n}S`).innerHTML.toLowerCase()
-    document.getElementById(`prediction-img${n}S`).src = `../images/logos/${team}.jpg`;
-  }
-}
-
-function loadTeamsA(n, data) {
-  var page = document.getElementById('title').innerHTML.toLowerCase()
-  if (page == 'picksys') {  
-    document.getElementById(`prediction${n}A`).innerHTML = `${data[n-1].Prediction} - ${data[n-1].Level}`;
-    document.getElementById(`match${n}A`).innerHTML = `${data[n-1].Base_Team} vs. ${data[n-1].Opp}`;
-    var team = data[n-1].Prediction.toLowerCase()
-    document.getElementById(`prediction-img${n}A`).src = `images/logos/${team}.jpg`;
-  } else if (page == 'accuracydata'| page == 'allteamdata') {
-
-  } else {
-    var team = document.getElementById(`prediction${n}A`).innerHTML.toLowerCase()
-    document.getElementById(`prediction-img${n}A`).src = `../images/logos/${team}.jpg`;
-  }
-}
-
-function levelAcc(data) {
-  var page = document.getElementById('title').innerHTML.toLowerCase()
-  console.log(page)
+  var maxweek = 0;
+  for (k = 0; k < data.length; k++) {
+    week = data[k].Week;
+    if (week > maxweek) {
+      maxweek = week;
+    };
+  };
   if (page == 'picksys') {
-    document.getElementById('accratings').innerHTML = `${data[0].Year} Model 1 Accuracy Rating:<br>L3: ${data[0].Agree3_Accuracy}% (${data[0].Agree3_Right}/${data[0].Agree3_Total}) - 
-    L2: ${data[0].Agree2_Accuracy}% (${data[0].Agree2_Right}/${data[0].Agree2_Total}) - 
-    Total: ${((data[0].Agree2_Right+data[0].Agree3_Right)/(data[0].Agree2_Total+data[0].Agree3_Total)*100).toFixed(2)}%`;
-  } else {}
+    var n = 1;
+    for (j = 0; j < data.length; j++) {
+      if (data[j].Week == maxweek) {
+        document.getElementById(`prediction${n}A`).innerHTML = `<b>${data[j].Prediction} - ${data[j].Level}</b>`;
+        document.getElementById(`match${n}A`).innerHTML = `${data[j].Base_Team} vs. ${data[j].Opp}`;
+        var team = data[j].Prediction.toLowerCase();
+        document.getElementById(`prediction-img${n}A`).src = `images/logos/${team}.jpg`;
+        n = n + 1;
+      } else {};
+    };
+  } else if (page == 'accuracydata'| page == 'allteamdata') {
+
+  } else {
+    for (k = 1; k < maxweek; k++) {
+      if (page == `week ${k}`) {
+        var n = 1;
+        for (j = 0; j < data.length; j++) {
+          if (data[j].Week == k) {
+            document.getElementById(`prediction${n}A`).innerHTML = `<b>${data[j].Prediction} - ${data[j].Level}</b>`;
+            document.getElementById(`match${n}A`).innerHTML = `${data[j].Base_Team} vs. ${data[j].Opp}`;
+            var team = data[j].Prediction.toLowerCase();
+            document.getElementById(`prediction-img${n}A`).src = `../images/logos/${team}.jpg`;
+            n = n + 1;
+          };
+        };
+      };
+    };
+  };
 }
 
-levelAcc(level_accData)
+function loadTeamsS(data, data2) {
+  var page = document.getElementById('title').innerHTML.toLowerCase()
+  var maxweek = 0;
+  for (k = 0; k < data.length; k++) {
+    week = data[k].Week;
+    if (week > maxweek) {
+      maxweek = week;
+    };
+  };
+  if (page == 'picksys') {
+    var n = 1;
+    for (j = 0; j < data.length; j++) {
+      if (data[j].Week == maxweek) {
+        document.getElementById(`prediction${n}S`).innerHTML = `<b>${data[j].Prediction} - ${data[j].Level}</b>`;
+        document.getElementById(`match${n}S`).innerHTML = `${data[j].Base_Team} vs. ${data[j].Opp}`;
+        var team = data[j].Prediction.toLowerCase();
+        document.getElementById(`prediction-img${n}S`).src = `images/logos/${team}.jpg`;
+        n = n + 1;
+      } else {};
+    };
+  } else if (page == 'accuracydata'| page == 'allteamdata') {
 
-for (i = 1; i < 15; i++) {
-  loadTeamsA(i, predData)
-  loadTeamsS(i, predDataS)
+  } else {
+    for (k = 1; k < maxweek; k++) {
+      if (page == `week ${k}`) {
+        var n = 1;
+        for (j = 0; j < data.length; j++) {
+          if (data[j].Week == k) {
+            document.getElementById(`prediction${n}S`).innerHTML = `<b>${data[j].Prediction} - ${data[j].Level}</b>`;
+            document.getElementById(`match${n}S`).innerHTML = `${data[j].Base_Team} vs. ${data[j].Opp}`;
+            var team = data[j].Prediction.toLowerCase();
+            document.getElementById(`prediction-img${n}S`).src = `../images/logos/${team}.jpg`;
+            n = n + 1;
+          };
+        };
+      };
+    };
+  };
 }
+
+function levelAccA(data, data2) {
+  var page = document.getElementById('title').innerHTML.toLowerCase();
+  var maxweek = 0;
+  for (k = 0; k < data2.length; k++) {
+    week = data2[k].Week;
+    if (week > maxweek) {
+      maxweek = week;
+    };
+  };
+  if (page == 'picksys') {
+    document.getElementById('accratings').innerHTML = `<u>L3</u>: ${data[0].L3_Accuracy}% (${data[0].L3_Right}/${data[0].L3_Total}) - 
+    <u>L2</u>: ${data[0].L2_Accuracy}% (${data[0].L2_Right}/${data[0].L2_Total}) - 
+    <u>L1</u>: ${data[0].L1_Accuracy}% (${data[0].L1_Right}/${data[0].L1_Total}) - 
+    <u>Total Accuracy:</u> ${data[0].Total_Accuracy}%`;
+  } else if (page == 'accuracydata'| page == 'allteamdata') {} else {
+    for (k = 1; k < maxweek; k++) {
+      if (page == `week ${k}`) {
+        var wins = 0;
+        var total = 0;
+        for (j = 0; j < data2.length; j++) {
+          if (data2[j].Week == k) {
+            if (data2[j].Correct == 1) {
+              wins = wins + 1;
+              total = total + 1;
+            } else {
+              total = total + 1
+            }
+          };
+        };
+        accuracy = wins/total*100;
+        document.getElementById('accratings').innerHTML = `Model 1 Accuracy: ${accuracy.toFixed(1)}%`;
+      };
+    };
+  }
+}
+
+function confidenceA(data, data2) {
+  var maxweek = 0;
+  for (k = 0; k < data.length; k++) {
+    week = data[k].Week;
+    if (week > maxweek) {
+      maxweek = week;
+    };
+  };
+
+  var page = document.getElementById('title').innerHTML.toLowerCase();
+  if (page == 'picksys') {
+
+    document.getElementById('link-to-espn').href = `https://www.espn.com/nfl/scoreboard/_/year/2020/seasontype/2/week/${maxweek}`;
+
+    var l3count = 0;
+    var l2count = 0;
+    var l1count = 0;
+    var totalgames = 0;
+
+    for (j = 0; j < data.length; j++) {
+      if (data[j].Week == maxweek) {
+        if (data[j].Level == 'L3') {
+          l3count = l3count + 1;
+        } else if (data[j].Level == 'L2') {
+          l2count = l2count + 1
+        } else if (data[j].Level == 'L1') {
+          l1count = l1count + 1
+        };
+        totalgames = totalgames + 1
+      } else {};
+    };
+  
+    l3acc = ((data2[0].L3_Accuracy/100)*l3count) - (((data2[0].L3_Accuracy/100)*l3count) % 1);
+    l2acc = ((data2[0].L2_Accuracy/100)*l2count) - (((data2[0].L2_Accuracy/100)*l2count) % 1);
+    l1acc = ((data2[0].L1_Accuracy/100)*l1count) - (((data2[0].L1_Accuracy/100)*l1count) % 1);
+    confidence = ((l3acc + l2acc + l1acc)/(totalgames)*100).toFixed(1);
+
+    document.getElementById('pred-acc-perc').innerHTML = `<b>${confidence}% Confident</b>`;
+  } else {
+    for (k = 1; k < maxweek; k++) {
+      if (page == `week ${k}`) {
+
+        document.getElementById('link-to-espn').href = `https://www.espn.com/nfl/scoreboard/_/year/2020/seasontype/2/week/${k}`;
+
+        var pl3count = 0;
+        var pl2count = 0;
+        var pl1count = 0;
+        var ptotalgames = 0;
+        var pl3right = 0;
+        var pl2right = 0;
+        var pl1right = 0;
+        var cl3right = 0;
+        var cl2right = 0;
+        var cl1right = 0;
+        var cl3count = 0;
+        var cl2count = 0;
+        var cl1count = 0;
+        var ctotalgames = 0;
+
+        for (j = 0; j < data.length; j++) {
+
+          if (data[j].Week < k) {
+            if (data[j].Level == 'L3') {
+              pl3count = pl3count + 1;
+              if (data[j].Correct == 1) {
+                pl3right = pl3right + 1;
+              };
+            } else if (data[j].Level == 'L2') {
+              pl2count = pl2count + 1;
+              if (data[j].Correct == 1) {
+                pl2right = pl2right + 1;
+              };
+            } else if (data[j].Level == 'L1') {
+              pl1count = pl1count + 1;
+              if (data[j].Correct == 1) {
+                pl1right = pl1right + 1;
+              };
+            } else {};
+            ptotalgames = ptotalgames + 1
+          } else {};
+
+          if (data[j].Week == k) {
+            ctotalgames = ctotalgames + 1
+            if (data[j].Level == 'L3') {
+              cl3count = cl3count + 1;
+              if (data[j].Correct == 1) {
+                cl3right = cl3right + 1;
+              };
+            } else if (data[j].Level == 'L2') {
+              cl2count = cl2count + 1;
+              if (data[j].Correct == 1) {
+                cl2right = cl2right + 1;
+              };
+            } else if (data[j].Level == 'L1') {
+              cl1count = cl1count + 1;
+              if (data[j].Correct == 1) {
+                cl1right = cl1right + 1;
+              };
+            } else {};
+          } else {};
+
+        };
+
+        var past3acc = 0;
+        var past2acc = 0;
+        var past1acc = 0;
+
+        if (pl3count == 0) {
+          past3acc = 0
+        } else {
+          past3acc = (pl3right/pl3count);
+        }
+        if (pl2count == 0) {
+          past2acc = 0
+        } else {
+          past2acc = (pl2right/pl2count);
+        }
+        if (pl1count == 0) {
+          past1acc = 0
+        } else {
+          past1acc = (pl1right/pl1count);
+        }
+
+        l3acc = (past3acc*cl3count) - ((past3acc*cl3count) % 1);
+        l2acc = (past2acc*cl2count) - ((past2acc*cl2count) % 1);
+        l1acc = (past1acc*cl1count) - ((past1acc*cl1count) % 1);
+        confidence = ((l3acc + l2acc + l1acc)/(ctotalgames)*100).toFixed(1);
+
+        document.getElementById('pred-acc-perc').innerHTML = `<b>${confidence}% Confident</b>`;
+
+      };
+    };
+  };
+}
+
+function confidenceS(data, data2) {
+  var maxweek = 0;
+  for (k = 0; k < data.length; k++) {
+    week = data[k].Week;
+    if (week > maxweek) {
+      maxweek = week;
+    };
+  };
+
+  var page = document.getElementById('title').innerHTML.toLowerCase();
+  if (page == 'picksys') {
+    var l3count = 0;
+    var l2count = 0;
+    var l1count = 0;
+    var totalgames = 0;
+
+    for (j = 0; j < data.length; j++) {
+      if (data[j].Week == maxweek) {
+        if (data[j].Level == 'L3') {
+          l3count = l3count + 1;
+        } else if (data[j].Level == 'L2') {
+          l2count = l2count + 1
+        } else if (data[j].Level == 'L1') {
+          l1count = l1count + 1
+        };
+        totalgames = totalgames + 1
+      } else {};
+    };
+  
+    l3acc = ((data2[0].L3_Accuracy/100)*l3count) - (((data2[0].L3_Accuracy/100)*l3count) % 1);
+    l2acc = ((data2[0].L2_Accuracy/100)*l2count) - (((data2[0].L2_Accuracy/100)*l2count) % 1);
+    l1acc = ((data2[0].L1_Accuracy/100)*l1count) - (((data2[0].L1_Accuracy/100)*l1count) % 1);
+    confidence = ((l3acc + l2acc + l1acc)/(totalgames)*100).toFixed(1);
+
+    document.getElementById('pred-acc-percS').innerHTML = `<b>${confidence}% Confident</b>`;
+  } else {
+    for (k = 1; k < maxweek; k++) {
+      if (page == `week ${k}`) {
+        var pl3count = 0;
+        var pl2count = 0;
+        var pl1count = 0;
+        var ptotalgames = 0;
+        var pl3right = 0;
+        var pl2right = 0;
+        var pl1right = 0;
+        var cl3right = 0;
+        var cl2right = 0;
+        var cl1right = 0;
+        var cl3count = 0;
+        var cl2count = 0;
+        var cl1count = 0;
+        var ctotalgames = 0;
+
+        for (j = 0; j < data.length; j++) {
+
+          if (data[j].Week < k) {
+            if (data[j].Level == 'L3') {
+              pl3count = pl3count + 1;
+              if (data[j].Correct == 1) {
+                pl3right = pl3right + 1;
+              };
+            } else if (data[j].Level == 'L2') {
+              pl2count = pl2count + 1;
+              if (data[j].Correct == 1) {
+                pl2right = pl2right + 1;
+              };
+            } else if (data[j].Level == 'L1') {
+              pl1count = pl1count + 1;
+              if (data[j].Correct == 1) {
+                pl1right = pl1right + 1;
+              };
+            } else {};
+            ptotalgames = ptotalgames + 1
+          } else {};
+
+          if (data[j].Week = k) {
+            ctotalgames = ctotalgames + 1
+            if (data[j].Level == 'L3') {
+              cl3count = cl3count + 1;
+              if (data[j].Correct == 1) {
+                cl3right = cl3right + 1;
+              };
+            } else if (data[j].Level == 'L2') {
+              cl2count = cl2count + 1;
+              if (data[j].Correct == 1) {
+                cl2right = cl2right + 1;
+              };
+            } else if (data[j].Level == 'L1') {
+              cl1count = cl1count + 1;
+              if (data[j].Correct == 1) {
+                cl1right = cl1right + 1;
+              };
+            } else {};
+          } else {};
+
+        };
+
+        var past3acc = 0;
+        var past2acc = 0;
+        var past1acc = 0;
+
+        if (pl3count == 0) {
+          past3acc = 0
+        } else {
+          past3acc = (pl3right/pl3count);
+        }
+        if (pl2count == 0) {
+          past2acc = 0
+        } else {
+          past2acc = (pl2right/pl2count);
+        }
+        if (pl1count == 0) {
+          past1acc = 0
+        } else {
+          past1acc = (pl1right/pl1count);
+        }
+
+        l3acc = (past3acc*cl3count) - ((past3acc*cl3count) % 1);
+        l2acc = (past2acc*cl2count) - ((past2acc*cl2count) % 1);
+        l1acc = (past1acc*cl1count) - ((past1acc*cl1count) % 1);
+        confidence = ((l3acc + l2acc + l1acc)/(ctotalgames)*100).toFixed(1);
+
+        document.getElementById('pred-acc-percS').innerHTML = `<b>${confidence}% Confident</b>`;
+
+      };
+    };
+  };
+}
+
+function styleCardsA(data) {
+  var page = document.getElementById('title').innerHTML.toLowerCase();
+  var maxweek = 0;
+  for (i = 0; i < data.length; i++) {
+    week = data[i].Week;
+    if (week > maxweek) {
+      maxweek = week;
+    };
+  };
+  if (page == 'picksys') {
+    var n = 1;
+    for (j = 0; j < data.length; j++) {
+      if (data[j].Week == maxweek) {
+        document.getElementById(`card${n}A`).className = "card";
+        n = n + 1;
+      };
+    };
+  } else if (page == 'accuracydata'| page == 'allteamdata') {} else {
+    for (k = 1; k < maxweek; k++) {
+      if (page == `week ${k}`) {
+        var n = 1;
+        for (j = 0; j < data.length; j++) {
+          if (data[j].Week == k) {
+            if ((document.getElementById(`prediction${n}A`).innerHTML == `<b>${data[j].Prediction} - ${data[j].Level}</b>`) & (data[j].Correct == 1)) {
+              document.getElementById(`card${n}A`).className = "winning-card card";
+              n = n + 1;
+            } else if ((document.getElementById(`prediction${n}A`).innerHTML == `<b>${data[j].Prediction} - ${data[j].Level}</b>`) & (data[j].Correct == 0)) {
+              document.getElementById(`card${n}A`).className = "losing-card card";
+              n = n + 1;
+            } else {
+              document.getElementById(`card${n}A`).className = "card";
+              n = n + 1;
+            };
+          };
+        };
+      };
+    };
+  };
+}
+
+function styleCardsS(data) {
+  var page = document.getElementById('title').innerHTML.toLowerCase();
+  var maxweek = 0;
+  for (k = 0; k < data.length; k++) {
+    week = data[k].Week;
+    if (week > maxweek) {
+      maxweek = week;
+    };
+  };
+  if (page == 'picksys') {
+    var n = 1;
+    for (j = 0; j < data.length; j++) {
+      if (data[j].Week == maxweek) {
+        document.getElementById(`card${n}S`).className = "card";
+        n = n + 1;
+      };
+    };
+  } else {};
+}
+
+levelAccA(level_accData, predData);
+loadTeamsA(predData);
+confidenceA(predData, level_accData);
+styleCardsA(predData);
+loadTeamsS(predDataS);
+confidenceS(predDataS, level_accData);
+styleCardsS(predDataS);
 
 document.getElementById("defaultOpen").click()
 
