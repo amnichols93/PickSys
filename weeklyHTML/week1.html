@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id='title'>Week 1</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+    <style>
+        html, body {
+            max-width: 100%;
+            overflow-x: hidden;
+        }
+    </style>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body class='bg-dark'>
+    <div class="wrapper">
+        <nav class="navbar navbar-dark bg-dark navbar-expand-lg">
+            <a class="navbar-brand" href="../index.html">Home</a>
+            <a class="navbar-brand" href="week1.html">Week 1</a>
+            <a class="navbar-brand" href="week2.html">Week 2</a>
+            <a class="navbar-brand" href="week3.html">Week 3</a>
+            <a class="navbar-brand" href="week4.html">Week 4</a>
+            <a class="navbar-brand" href="week5.html">Week 5</a>
+            <a class="navbar-brand" href="week6.html">Week 6</a>
+            <a class="navbar-brand" href="week7.html">Week 7</a>
+            <a class="navbar-brand" href="../accuracydata.html">Accuracy Data</a>
+            <a class='navbar-brand' href='allteamdata.html'>Raw Data</a>
+        </nav>
+    </div>
+    <div class="jumbotron">
+        <h1 class="display-4 text-white text-center">PickSys</h1>
+        <h3 class="display-8 text-white text-center">Weekly NFL Picks</h3>
+    </div>
+    <div class="row">
+        <div class='col-md-1'></div>
+        <div class='col-md-10' style='background: linear-gradient(to right, #343A40,#700000,#343A40); text-align: center; border-radius: 15px'>
+            <h1 class="display-3 text-light text-center"><b>Week 1</b></h1>
+            <h3 class="display-8 text-light text-center" id='accratings'></h3>
+        </div>
+        <div class='col-md-1'></div>
+    </div>
+    <div class="row">
+        <div class='col-md-12'>
+            <h1 class="display-4 text-dark text-center"></h1>
+        </div>
+    </div>
+    <div class='row'>
+        <p></p>
+    </div>
+    <!--ROW 1-->
+    <div class='row'>
+        <div class='col-md-1'></div>
+        <div class='col-md-2'>
+            <div id='card0A' class="card">
+                <a id='link-to-espn' target="_blank">
+                    <div class='container2'>
+                        <img src="../images/original_art/pickanalysis.JPG" alt="Avatar" style="width:100%">
+                        <div class="overlay">
+                            <div class="scoretext">
+                                No prior 2020 games to offer a confidence rating.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container" style="background-color:rgb(112, 0, 0)">
+                        <h4 id='pred-acc-perc' class='text-light'></h4>
+                        <p id='pred-acc-week' class='text-light'>Week 1</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <!--CARD 2-->
+        <div class='col-md-2'>
+            <div id='card1A'>
+                <img id='prediction-img1A' alt="Avatar" style="width:100%">
+                <div class="container">
+                <h4 class='text-dark' id='prediction1A'></h4>
+                <p class='text-dark' id='match1A'></p>
+                </div>
+            </div>
+        </div>
+        <!--CARD 3-->
+        <div class='col-md-2'>
+            <div id='card2A'>
+                <img id='prediction-img2A' alt="Avatar" style="width:100%">
+                <div class="container">
+                <h4 class='text-dark' id='prediction2A'></h4>
+                <p class='text-dark' id='match2A'></p>
+                </div>
+            </div>
+        </div>
+        <!--CARD 4-->
+        <div class='col-md-2'>
+            <div id='card3A'>
+                <img id='prediction-img3A' alt="Avatar" style="width:100%">
+                <div class="container">
+                <h4 class='text-dark' id='prediction3A'></h4>
+                <p class='text-dark' id='match3A'></p>
+                </div>
+            </div>
+        </div>
+        <!--CARD 5-->
+        <div class='col-md-2'>
+            <div id='card4A'>
+                <img id='prediction-img4A' alt="Avatar" style="width:100%">
+                <div class="container">
+                <h4 class='text-dark' id='prediction4A'></h4>
+                <p class='text-dark' id='match4A'></p>
+                </div>
+            </div>
+        </div>
+        <div class='col-md-1'></div>
+    </div>
+    <div class='row'>
+        <p></p>
+    </div>
+    <!--ROW 2-->
+    <div class='row'>
+        <!--CARD 6-->
+        <div class='col-md-2'>
+            <div id='card5A'>
+                <img id='prediction-img5A' alt="Avatar" style="width:100%">
+                <div class="container">
+                <h4 class='text-dark' id='prediction5A'></h4>
+                <p class='text-dark' id='match5A'></p>
+                </div>
+            </div>
+        </div>
+        <!--CARD 7-->
+        <div class='col-md-2'>
+            <div id='card6A'>
+                <img id='prediction-img6A' alt="Avatar" style="width:100%">
+                <div class="container">
+                <h4 class='text-dark' id='prediction6A'></h4>
+                <p class='text-dark' id='match6A'></p>
+                </div>
+            </div>
+        </div>
+        <!--CARD 8-->
+        <div class='col-md-2'>
+            <div id='card7A'>
+                <img id='prediction-img7A' alt="Avatar" style="width:100%">
+                <div class="container">
+                <h4 class='text-dark' id='prediction7A'></h4>
+                <p class='text-dark' id='match7A'></p>
+                </div>
+            </div>
+        </div>
+        <!--CARD 9-->
+        <div class='col-md-2'>
+            <div id='card8A'>
+                <img id='prediction-img8A' alt="Avatar" style="width:100%">
+                <div class="container">
+                <h4 class='text-dark' id='prediction8A'></h4>
+                <p class='text-dark' id='match8A'></p>
+                </div>
+            </div>
+        </div>
+        <!--CARD 10-->
+        <div class='col-md-2'>
+            <div id='card9A'>
+                <img id='prediction-img9A' alt="Avatar" style="width:100%">
+                <div class="container">
+                <h4 class='text-dark' id='prediction9A'></h4>
+                <p class='text-dark' id='match9A'></p>
+                </div>
+            </div>
+        </div>
+        <!--CARD 11-->
+        <div class='col-md-2'>
+            <div id='card10A'>
+                <img id='prediction-img10A' alt="Avatar" style="width:100%">
+                <div class="container">
+                <h4 class='text-dark' id='prediction10A'></h4>
+                <p class='text-dark' id='match10A'></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class='row'>
+        <p></p>
+    </div>
+    <!--ROW 3-->
+    <div class="row">
+        <!--CARD 12-->
+        <div class='col-md-2'>
+            <div id='card11A'>
+                <img id='prediction-img11A' alt="Avatar" style="width:100%">
+                <div class="container">
+                <h4 class='text-dark' id='prediction11A'></h4>
+                <p class='text-dark' id='match11A'></p>
+                </div>
+            </div>
+        </div>
+        <!--CARD 13-->
+        <div class='col-md-2'>
+            <div id='card12A'>
+                <img id='prediction-img12A' alt="Avatar" style="width:100%">
+                <div class="container">
+                <h4 class='text-dark' id='prediction12A'></h4>
+                <p class='text-dark' id='match12A'></p>
+                </div>
+            </div>
+        </div>
+        <!--CARD 14-->
+        <div class='col-md-2'>
+            <div id='card13A'>
+                <img id='prediction-img13A' alt="Avatar" style="width:100%">
+                <div class="container">
+                <h4 class='text-dark' id='prediction13A'></h4>
+                <p class='text-dark' id='match13A'></p>
+                </div>
+            </div>
+        </div>
+        <!--CARD 15-->
+        <div class='col-md-2'>
+            <div id='card14A'>
+                <img id='prediction-img14A' alt="Avatar" style="width:100%">
+                <div class="container">
+                <h4 class='text-dark' id='prediction14A'></h4>
+                <p class='text-dark' id='match14A'></p>
+                </div>
+            </div>
+        </div>
+        <!--CARD 16-->
+        <div class='col-md-2'>
+            <div id='card15A'>
+                <img id='prediction-img15A' alt="Avatar" style="width:100%">
+                <div class="container">
+                <h4 class='text-dark' id='prediction15A'></h4>
+                <p class='text-dark' id='match15A'></p>
+                </div>
+            </div>
+        </div>
+        <!--CARD 17-->
+        <div class='col-md-2'>
+            <div id='card16A'>
+                <img id='prediction-img16A' alt="Avatar" style="width:100%">
+                <div class="container">
+                <h4 class='text-dark' id='prediction16A'></h4>
+                <p class='text-dark' id='match16A'></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--STAFF CHOICES-->
+    <div id='Staff' class='tabcontent'>
+        <div class='row'>
+            <div class='col-md-1'></div>
+            <div class='col-md-2'>
+                <div id='card0S'>
+                    <a href='https://www.espn.com/nfl/scoreboard/_/year/2020/seasontype/2/week/7' target="_blank">
+                        <img src="../images/original_art/pickanalysis.JPG" alt="Avatar" style="width:100%">
+                        <div class="container">
+                        <h4 id='pred-acc-percS' class='text-dark'></h4>
+                        <p id='pred-acc-weekS' class='text-dark'>Week 7</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class='col-md-2'>
+                <div id='card1S'>
+                    <a href='' target="_blank">
+                        <img id='prediction-img1S' alt="Avatar" style="width:100%">
+                        <div class="container">
+                        <h4 class='text-dark' id='prediction1S'></h4>
+                        <p class='text-dark' id='match1S'></p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class='col-md-2'>
+                <div id='card2S'>
+                    <a href='' target="_blank">
+                        <img id='prediction-img2S' alt="Avatar" style="width:100%">
+                        <!--style="background-color:rgb(112, 0, 0)"-->
+                        <div class="container">
+                        <h4 class='text-dark' id='prediction2S'></h4>
+                        <p class='text-dark' id='match2S'></p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class='col-md-2'>
+                <div id='card3S'>
+                    <a href='' target="_blank">
+                        <img id='prediction-img3S' alt="Avatar" style="width:100%">
+                        <div class="container">
+                        <h4 class='text-dark' id='prediction3S'></h4>
+                        <p class='text-dark' id='match3S'></p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class='col-md-2'>
+                <div id='card4S'>
+                    <a href='' target="_blank">
+                        <img id='prediction-img4S' alt="Avatar" style="width:100%">
+                        <div class="container">
+                        <h4 class='text-dark' id='prediction4S'></h4>
+                        <p class='text-dark' id='match4S'></p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class='col-md-1'></div>
+        </div>
+        <div class='row'>
+            <p></p>
+        </div>
+        <!--ROW 2-->
+        <div class='row'>
+            <div class='col-md-2'>
+                <div id='card5S'>
+                    <a href='' target="_blank">
+                        <img id='prediction-img5S' alt="Avatar" style="width:100%">
+                        <div class="container">
+                        <h4 class='text-dark' id='prediction5S'></h4>
+                        <p class='text-dark' id='match5S'></p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class='col-md-2'>
+                <div id='card6S'>
+                    <a href='' target="_blank">
+                        <img id='prediction-img6S' alt="Avatar" style="width:100%">
+                        <div class="container">
+                        <h4 class='text-dark' id='prediction6S'></h4>
+                        <p class='text-dark' id='match6S'></p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class='col-md-2'>
+                <div id='card7S'>
+                    <a href='' target="_blank">
+                        <img id='prediction-img7S' alt="Avatar" style="width:100%">
+                        <div class="container">
+                        <h4 class='text-dark' id='prediction7S'></h4>
+                        <p class='text-dark' id='match7S'></p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class='col-md-2'>
+                <div id='card8S'>
+                    <a href='' target="_blank">
+                        <img id='prediction-img8S' alt="Avatar" style="width:100%">
+                        <div class="container">
+                        <h4 class='text-dark' id='prediction8S'></h4>
+                        <p class='text-dark' id='match8S'></p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class='col-md-2'>
+                <div id='card9S'>
+                    <a href='' target="_blank">
+                        <img id='prediction-img9S' alt="Avatar" style="width:100%">
+                        <div class="container">
+                        <h4 class='text-dark' id='prediction9S'></h4>
+                        <p class='text-dark' id='match9S'></p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class='col-md-2'>
+                <div id='card10S'>
+                    <a href='' target="_blank">
+                        <img id='prediction-img10S' alt="Avatar" style="width:100%">
+                        <div class="container">
+                        <h4 class='text-dark' id='prediction10S'></h4>
+                        <p class='text-dark' id='match10S'></p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class='row'>
+            <p></p>
+        </div>
+        <!--ROW 3-->
+        <div class='row'>
+            <div class='col-md-2'>
+                <div id='card11S'>
+                    <a href='' target="_blank">
+                        <img id='prediction-img11S' alt="Avatar" style="width:100%">
+                        <div class="container">
+                        <h4 class='text-dark' id='prediction11S'></h4>
+                        <p class='text-dark' id='match11S'></p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class='col-md-2'>
+                <div id='card12S'>
+                    <a href='' target="_blank">
+                        <img id='prediction-img12S' alt="Avatar" style="width:100%">
+                        <div class="container">
+                            <h4 class='text-dark' id='prediction12S'></h4>
+                            <p class='text-dark' id='match12S'></p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class='col-md-2'>
+                <div id='card13S'>
+                    <a href='' target="_blank">
+                        <img id='prediction-img13S' alt="Avatar" style="width:100%">
+                        <div class="container">
+                            <h4 class='text-dark' id='prediction13S'></h4>
+                            <p class='text-dark' id='match13S'></p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class='col-md-2'>
+                <div id='card14S'>
+                    <a href='' target="_blank">
+                        <img id='prediction-img14S' alt="Avatar" style="width:100%">
+                        <div class="container">
+                        <h4 class='text-dark' id='prediction14S'></h4>
+                        <p class='text-dark' id='match14S'></p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <!--CARD 16-->
+            <div class='col-md-2'>
+                <div class="card">
+                    <img id='prediction-img15S' alt="Avatar" style="width:100%">
+                    <div class="container">
+                    <h4 class='text-dark' id='prediction15S'></h4>
+                    <p class='text-dark' id='match15S'></p>
+                    </div>
+                </div>
+            </div>
+            <!--CARD 17-->
+            <div class='col-md-2'>
+                <div class="card">
+                    <img id='prediction-img16S' alt="Avatar" style="width:100%">
+                    <div class="container">
+                    <h4 class='text-dark' id='prediction16S'></h4>
+                    <p class='text-dark' id='match16S'></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class='col-md-12'>
+            <p class="bg-white"></p>
+        </div>
+    </div>
+    <div class='row'>
+        <div class='col-md-12'>
+            <p class='text-center'>PickSys does not own any images used to represent a team logo. Last Updated: October 22, 2020</p>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.11.0/d3.js"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="../js/data.js"></script>
+    <script src='../js/predictions.js'></script>
+    
+    <script src='../js/script.js'></script>
+</body>
+</html>
