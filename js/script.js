@@ -265,7 +265,7 @@ function levelAccS(data, data2) {
     <u>L2</u>: ${data[0].L2_Accuracy}% (${data[0].L2_Right}/${data[0].L2_Total}) - 
     <u>L1</u>: ${data[0].L1_Accuracy}% (${data[0].L1_Right}/${data[0].L1_Total}) - 
     <u>L0</u>: ${data[0].L0_Accuracy}% (${data[0].L0_Right}/${data[0].L0_Total}) - 
-    <u>Total Accuracy:</u> ${data[0].Total_Accuracy}%`;
+    <u>Total Accuracy:</u> ${data[0].Total}%`;
   } else if (page == 'accuracydata'| page == 'allteamdata') {} else {
     for (k = 1; k < maxweek; k++) {
       if (page == `week ${k}`) {
