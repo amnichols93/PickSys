@@ -2633,8 +2633,8 @@ var total_predS = [
     Week: 9,
     Base_Team: "Cowboys",
     Opp: "Steelers",
-    Prediction: "Cowboys",
-    Level: "L2",
+    Prediction: "Steelers",
+    Level: "L0",
     Correct: 0
   },
   {
