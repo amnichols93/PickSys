@@ -149,7 +149,7 @@ function loadTeamsA(data) {
     for (j = 0; j < data.length; j++) {
       if (data[j].Week == maxweek) {
         document.getElementById(`prediction${n}A`).innerHTML = `<b>${data[j].Prediction} - ${data[j].Level}</b>`;
-        document.getElementById(`match${n}A`).innerHTML = `${data[j].Base_Team} vs. ${data[j].Opp}`;
+        document.getElementById(`match${n}A`).innerHTML = `${data[j].Opp} vs. ${data[j].Base_Team}`;
         var team = data[j].Prediction.toLowerCase();
         document.getElementById(`prediction-img${n}A`).src = `images/logos/${team}.jpg`;
         n = n + 1;
@@ -164,7 +164,7 @@ function loadTeamsA(data) {
         for (j = 0; j < data.length; j++) {
           if (data[j].Week == k) {
             document.getElementById(`prediction${n}A`).innerHTML = `<b>${data[j].Prediction} - ${data[j].Level}</b>`;
-            document.getElementById(`match${n}A`).innerHTML = `${data[j].Base_Team} vs. ${data[j].Opp}`;
+            document.getElementById(`match${n}A`).innerHTML = `${data[j].Opp} vs. ${data[j].Base_Team}`;
             var team = data[j].Prediction.toLowerCase();
             document.getElementById(`prediction-img${n}A`).src = `../images/logos/${team}.jpg`;
             n = n + 1;
@@ -175,7 +175,7 @@ function loadTeamsA(data) {
   };
 }
 
-function loadTeamsS(data, data2) {
+function loadTeamsS(data) {
   var page = document.getElementById('title').innerHTML.toLowerCase()
   var maxweek = 0;
   for (k = 0; k < data.length; k++) {
@@ -189,7 +189,7 @@ function loadTeamsS(data, data2) {
     for (j = 0; j < data.length; j++) {
       if (data[j].Week == maxweek) {
         document.getElementById(`prediction${n}S`).innerHTML = `<b>${data[j].Prediction} - ${data[j].Level}</b>`;
-        document.getElementById(`match${n}S`).innerHTML = `${data[j].Base_Team} vs. ${data[j].Opp}`;
+        document.getElementById(`match${n}S`).innerHTML = `${data[j].Opp} vs. ${data[j].Base_Team}`;
         var team = data[j].Prediction.toLowerCase();
         document.getElementById(`prediction-img${n}S`).src = `images/logos/${team}.jpg`;
         n = n + 1;
@@ -204,7 +204,7 @@ function loadTeamsS(data, data2) {
         for (j = 0; j < data.length; j++) {
           if (data[j].Week == k) {
             document.getElementById(`prediction${n}S`).innerHTML = `<b>${data[j].Prediction} - ${data[j].Level}</b>`;
-            document.getElementById(`match${n}S`).innerHTML = `${data[j].Base_Team} vs. ${data[j].Opp}`;
+            document.getElementById(`match${n}S`).innerHTML = `${data[j].Opp} vs. ${data[j].Base_Team}`;
             var team = data[j].Prediction.toLowerCase();
             document.getElementById(`prediction-img${n}S`).src = `../images/logos/${team}.jpg`;
             n = n + 1;
@@ -227,8 +227,8 @@ function levelAccA(data, data2) {
   if (page == 'picksys') {
     document.getElementById('accratings').innerHTML = `<u>L3</u>: ${data[0].L3_Accuracy}% (${data[0].L3_Right}/${data[0].L3_Total}) - 
     <u>L2</u>: ${data[0].L2_Accuracy}% (${data[0].L2_Right}/${data[0].L2_Total}) - 
-    <u>L1</u>: ${data[0].L1_Accuracy}% (${data[0].L1_Right}/${data[0].L1_Total}) - 
-    <u>Total Accuracy:</u> ${data[0].Total}%`;
+    <u>L1</u>: ${data[0].L1_Accuracy}% (${data[0].L1_Right}/${data[0].L1_Total})
+    <br><u>Total Accuracy:</u> ${data[0].Total}%`;
   } else if (page == 'accuracydata'| page == 'allteamdata') {} else {
     for (k = 1; k < maxweek; k++) {
       if (page == `week ${k}`) {
@@ -264,8 +264,8 @@ function levelAccS(data, data2) {
     document.getElementById('accratingsS').innerHTML = `<u>L3</u>: ${data[0].L3_Accuracy}% (${data[0].L3_Right}/${data[0].L3_Total}) - 
     <u>L2</u>: ${data[0].L2_Accuracy}% (${data[0].L2_Right}/${data[0].L2_Total}) - 
     <u>L1</u>: ${data[0].L1_Accuracy}% (${data[0].L1_Right}/${data[0].L1_Total}) - 
-    <u>L0</u>: ${data[0].L0_Accuracy}% (${data[0].L0_Right}/${data[0].L0_Total}) - 
-    <u>Total Accuracy:</u> ${data[0].Total}%`;
+    <u>L0</u>: ${data[0].L0_Accuracy}% (${data[0].L0_Right}/${data[0].L0_Total}) 
+    <br><u>Total Accuracy:</u> ${data[0].Total}%`;
   } else if (page == 'accuracydata'| page == 'allteamdata') {} else {
     for (k = 1; k < maxweek; k++) {
       if (page == `week ${k}`) {
@@ -620,8 +620,9 @@ function styleCardsA(data) {
 function styleCardsS(data) {
   var page = document.getElementById('title').innerHTML.toLowerCase();
   var maxweek = 0;
-  for (k = 0; k < data.length; k++) {
-    week = data[k].Week;
+  var week = 0;
+  for (i = 0; i < data.length; i++) {
+    week = data[i].Week;
     if (week > maxweek) {
       maxweek = week;
     };
@@ -634,17 +635,38 @@ function styleCardsS(data) {
         n = n + 1;
       };
     };
-  } else {};
+  } else if (page == 'accuracydata'| page == 'allteamdata') {} else {
+    for (k = 1; k < maxweek; k++) {
+      if (page == `week ${k}`) {
+        var n = 1;
+        for (j = 0; j < data.length; j++) {
+          if (data[j].Week == k) {
+            if ((document.getElementById(`prediction${n}S`).innerHTML == `<b>${data[j].Prediction} - ${data[j].Level}</b>`) & (data[j].Correct == 1)) {
+              document.getElementById(`card${n}S`).className = "winning-card card";
+              n = n + 1;
+            } else if ((document.getElementById(`prediction${n}S`).innerHTML == `<b>${data[j].Prediction} - ${data[j].Level}</b>`) & (data[j].Correct == 0)) {
+              document.getElementById(`card${n}S`).className = "losing-card card";
+              n = n + 1;
+            } else {
+              document.getElementById(`card${n}S`).className = "card";
+              n = n + 1;
+            };
+          };
+        };
+      };
+    };
+  };
 }
 
 levelAccA(level_accData, predData);
 loadTeamsA(predData);
-confidenceA(predData, level_accData);
 styleCardsA(predData);
+confidenceA(predData, level_accData);
+
 levelAccS(level_accDataS, predDataS);
 loadTeamsS(predDataS);
-confidenceS(predDataS, level_accDataS);
 styleCardsS(predDataS);
+confidenceS(predDataS, level_accDataS);
 
 document.getElementById("defaultOpen").click()
 
