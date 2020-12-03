@@ -163,6 +163,8 @@ function loadTeamsA(data) {
         var n = 1;
         for (j = 0; j < data.length; j++) {
           if (data[j].Week == k) {
+            console.log(n);
+            console.log(k);
             document.getElementById(`prediction${n}A`).innerHTML = `<b>${data[j].Prediction} - ${data[j].Level}</b>`;
             document.getElementById(`match${n}A`).innerHTML = `${data[j].Opp} vs. ${data[j].Base_Team}`;
             var team = data[j].Prediction.toLowerCase();
