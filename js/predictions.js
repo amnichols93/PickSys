@@ -2,15 +2,15 @@
 var level_acc = [
   {
     Year: 2020,
-    L3_Right: 36,
-    L3_Total: 43,
-    L3_Accuracy: 83.72,
-    L2_Right: 71,
-    L2_Total: 118,
-    L2_Accuracy: 60.17,
-    L1_Right: 11,
-    L1_Total: 16,
-    L1_Accuracy: 68.75,
+    L3_Right: 40,
+    L3_Total: 47,
+    L3_Accuracy: 85.11,
+    L2_Right: 78,
+    L2_Total: 131,
+    L2_Accuracy: 59.54,
+    L1_Right: 10,
+    L1_Total: 14,
+    L1_Accuracy: 71.43,
     Total: 66.67
   }
 ]
@@ -19,19 +19,19 @@ var level_acc = [
 var level_accS = [
   {
     Year: 2020,
-    L3_Right: 35,
-    L3_Total: 42,
-    L3_Accuracy: 83.33,
-    L2_Right: 65,
-    L2_Total: 107,
-    L2_Accuracy: 60.75,
-    L1_Right: 11,
-    L1_Total: 16,
-    L1_Accuracy: 68.75,
-    L0_Right: 8,
-    L0_Total: 12,
-    L0_Accuracy: 66.67,
-    Total: 67.23
+    L3_Right: 39,
+    L3_Total: 46,
+    L3_Accuracy: 84.78,
+    L2_Right: 71,
+    L2_Total: 118,
+    L2_Accuracy: 60.17,
+    L1_Right: 10,
+    L1_Total: 14,
+    L1_Accuracy: 71.43,
+    L0_Right: 9,
+    L0_Total: 14,
+    L0_Accuracy: 64.29,
+    Total: 67.19
   }
 ]
 
@@ -57,12 +57,12 @@ var m1_weekly_acc = [
     L3: 75,
     L3_Correct: 3,
     L3_Total: 4,
-    L2: 66.67,
+    L2: 60,
     L2_Correct: 6,
-    L2_Total: 9,
-    L1: 33.33,
+    L2_Total: 10,
+    L1: 50,
     L1_Correct: 1,
-    L1_Total: 3,
+    L1_Total: 2,
     Total: 62.5
   },
   {
@@ -153,15 +153,15 @@ var m1_weekly_acc = [
     Year: 2020,
     Week: 9,
     L3: 100,
-    L3_Correct: 4,
-    L3_Total: 4,
-    L2: 75,
-    L2_Correct: 6,
-    L2_Total: 8,
+    L3_Correct: 3,
+    L3_Total: 3,
+    L2: 70,
+    L2_Correct: 7,
+    L2_Total: 10,
     L1: 100,
-    L1_Correct: 2,
-    L1_Total: 2,
-    Total: 85.71
+    L1_Correct: 1,
+    L1_Total: 1,
+    Total: 78.57
   },
   {
     Year: 2020,
@@ -204,6 +204,20 @@ var m1_weekly_acc = [
     L1_Correct: 1,
     L1_Total: 1,
     Total: 62.5
+  },
+  {
+    Year: 2020,
+    Week: 13,
+    L3: 100,
+    L3_Correct: 5,
+    L3_Total: 5,
+    L2: 60,
+    L2_Correct: 6,
+    L2_Total: 10,
+    L1: 0,
+    L1_Correct: 0,
+    L1_Total: 0,
+    Total: 73.33
   }
 ]
 
@@ -232,12 +246,12 @@ var m2_weekly_acc = [
     L3: 75,
     L3_Correct: 3,
     L3_Total: 4,
-    L2: 66.67,
+    L2: 60,
     L2_Correct: 6,
-    L2_Total: 9,
-    L1: 33.33,
+    L2_Total: 10,
+    L1: 50,
     L1_Correct: 1,
-    L1_Total: 3,
+    L1_Total: 2,
     L0: 0,
     L0_Correct: 0,
     L0_Total: 0,
@@ -349,18 +363,18 @@ var m2_weekly_acc = [
     Year: 2020,
     Week: 9,
     L3: 100,
-    L3_Correct: 4,
-    L3_Total: 4,
-    L2: 85.71,
-    L2_Correct: 6,
-    L2_Total: 7,
+    L3_Correct: 3,
+    L3_Total: 3,
+    L2: 77.78,
+    L2_Correct: 7,
+    L2_Total: 9,
     L1: 100,
-    L1_Correct: 2,
-    L1_Total: 2,
+    L1_Correct: 1,
+    L1_Total: 1,
     L0: 100,
     L0_Correct: 1,
     L0_Total: 1,
-    Total: 92.86
+    Total: 85.71
   },
   {
     Year: 2020,
@@ -412,6 +426,23 @@ var m2_weekly_acc = [
     L0_Correct: 1,
     L0_Total: 1,
     Total: 68.75
+  },
+  {
+    Year: 2020,
+    Week: 13,
+    L3: 100,
+    L3_Correct: 5,
+    L3_Total: 5,
+    L2: 62.5,
+    L2_Correct: 5,
+    L2_Total: 8,
+    L1: 0,
+    L1_Correct: 0,
+    L1_Total: 0,
+    L0: 50,
+    L0_Correct: 1,
+    L0_Total: 2,
+    Total: 73.33
   }
 ]
 
@@ -576,7 +607,7 @@ var total_pred = [
     Base_Team: "Browns",
     Opp: "Bengals",
     Prediction: "Bengals",
-    Level: "L1",
+    Level: "L2",
     Correct: 0
   },
   {
@@ -1548,7 +1579,7 @@ var total_pred = [
     Base_Team: "Colts",
     Opp: "Ravens",
     Prediction: "Ravens",
-    Level: "L3",
+    Level: "L2",
     Correct: 1
   },
   {
@@ -1610,9 +1641,9 @@ var total_pred = [
     Week: 9,
     Base_Team: "Washington",
     Opp: "Giants",
-    Prediction: "Giants",
-    Level: "L1",
-    Correct: 1
+    Prediction: "Washington",
+    Level: "L2",
+    Correct: 0
   },
   {
     Year: 2020,
@@ -2016,8 +2047,8 @@ var total_pred = [
     Base_Team: "49ers",
     Opp: "Bills",
     Prediction: "Bills",
-    Level: "L1",
-    Correct: 0
+    Level: "L2",
+    Correct: 1
   },
   {
     Year: 2020,
@@ -2035,7 +2066,7 @@ var total_pred = [
     Opp: "Rams",
     Prediction: "Rams",
     Level: "L2",
-    Correct: 0
+    Correct: 1
   },
   {
     Year: 2020,
@@ -2044,7 +2075,7 @@ var total_pred = [
     Opp: "Patriots",
     Prediction: "Patriots",
     Level: "L2",
-    Correct: 0
+    Correct: 1
   },
   {
     Year: 2020,
@@ -2053,7 +2084,7 @@ var total_pred = [
     Opp: "Broncos",
     Prediction: "Chiefs",
     Level: "L3",
-    Correct: 0
+    Correct: 1
   },
   {
     Year: 2020,
@@ -2062,7 +2093,7 @@ var total_pred = [
     Opp: "Bengals",
     Prediction: "Dolphins",
     Level: "L2",
-    Correct: 0
+    Correct: 1
   },
   {
     Year: 2020,
@@ -2071,7 +2102,7 @@ var total_pred = [
     Opp: "Saints",
     Prediction: "Saints",
     Level: "L2",
-    Correct: 0
+    Correct: 1
   },
   {
     Year: 2020,
@@ -2079,8 +2110,8 @@ var total_pred = [
     Base_Team: "Jets",
     Opp: "Raiders",
     Prediction: "Raiders",
-    Level: "L2",
-    Correct: 0
+    Level: "L3",
+    Correct: 1
   },
   {
     Year: 2020,
@@ -2089,7 +2120,7 @@ var total_pred = [
     Opp: "Eagles",
     Prediction: "Packers",
     Level: "L2",
-    Correct: 0
+    Correct: 1
   },
   {
     Year: 2020,
@@ -2097,8 +2128,8 @@ var total_pred = [
     Base_Team: "Ravens",
     Opp: "Cowboys",
     Prediction: "Ravens",
-    Level: "L2",
-    Correct: 0
+    Level: "L3",
+    Correct: 1
   },
   {
     Year: 2020,
@@ -2125,7 +2156,7 @@ var total_pred = [
     Opp: "Colts",
     Prediction: "Colts",
     Level: "L3",
-    Correct: 0
+    Correct: 1
   },
   {
     Year: 2020,
@@ -2142,6 +2173,150 @@ var total_pred = [
     Base_Team: "Vikings",
     Opp: "Jaguars",
     Prediction: "Vikings",
+    Level: "L3",
+    Correct: 1
+  },
+  {
+    Year: 2020,
+    Week: 14,
+    Base_Team: "49ers",
+    Opp: "Washington",
+    Prediction: "49ers",
+    Level: "L2",
+    Correct: 0
+  },
+  {
+    Year: 2020,
+    Week: 14,
+    Base_Team: "Bears",
+    Opp: "Texans",
+    Prediction: "Texans",
+    Level: "L2",
+    Correct: 0
+  },
+  {
+    Year: 2020,
+    Week: 14,
+    Base_Team: "Bengals",
+    Opp: "Cowboys",
+    Prediction: "Cowboys",
+    Level: "L2",
+    Correct: 0
+  },
+  {
+    Year: 2020,
+    Week: 14,
+    Base_Team: "Bills",
+    Opp: "Steelers",
+    Prediction: "Steelers",
+    Level: "L2",
+    Correct: 0
+  },
+  {
+    Year: 2020,
+    Week: 14,
+    Base_Team: "Browns",
+    Opp: "Ravens",
+    Prediction: "Ravens",
+    Level: "L2",
+    Correct: 0
+  },
+  {
+    Year: 2020,
+    Week: 14,
+    Base_Team: "Buccaneers",
+    Opp: "Vikings",
+    Prediction: "Buccaneers",
+    Level: "L1",
+    Correct: 0
+  },
+  {
+    Year: 2020,
+    Week: 14,
+    Base_Team: "Chargers",
+    Opp: "Falcons",
+    Prediction: "Falcons",
+    Level: "L2",
+    Correct: 0
+  },
+  {
+    Year: 2020,
+    Week: 14,
+    Base_Team: "Dolphins",
+    Opp: "Chiefs",
+    Prediction: "Chiefs",
+    Level: "L2",
+    Correct: 0
+  },
+  {
+    Year: 2020,
+    Week: 14,
+    Base_Team: "Eagles",
+    Opp: "Saints",
+    Prediction: "Saints",
+    Level: "L3",
+    Correct: 0
+  },
+  {
+    Year: 2020,
+    Week: 14,
+    Base_Team: "Giants",
+    Opp: "Cardinals",
+    Prediction: "Cardinals",
+    Level: "L3",
+    Correct: 0
+  },
+  {
+    Year: 2020,
+    Week: 14,
+    Base_Team: "Jaguars",
+    Opp: "Titans",
+    Prediction: "Titans",
+    Level: "L3",
+    Correct: 0
+  },
+  {
+    Year: 2020,
+    Week: 14,
+    Base_Team: "Lions",
+    Opp: "Packers",
+    Prediction: "Packers",
+    Level: "L2",
+    Correct: 0
+  },
+  {
+    Year: 2020,
+    Week: 14,
+    Base_Team: "Panthers",
+    Opp: "Broncos",
+    Prediction: "Panthers",
+    Level: "L2",
+    Correct: 0
+  },
+  {
+    Year: 2020,
+    Week: 14,
+    Base_Team: "Raiders",
+    Opp: "Colts",
+    Prediction: "Colts",
+    Level: "L2",
+    Correct: 0
+  },
+  {
+    Year: 2020,
+    Week: 14,
+    Base_Team: "Rams",
+    Opp: "Patriots",
+    Prediction: "Rams",
+    Level: "L2",
+    Correct: 0
+  },
+  {
+    Year: 2020,
+    Week: 14,
+    Base_Team: "Seahawks",
+    Opp: "Jets",
+    Prediction: "Seahawks",
     Level: "L3",
     Correct: 0
   }
@@ -2308,7 +2483,7 @@ var total_predS = [
     Base_Team: "Browns",
     Opp: "Bengals",
     Prediction: "Bengals",
-    Level: "L1",
+    Level: "L2",
     Correct: 0
   },
   {
@@ -3109,7 +3284,7 @@ var total_predS = [
     Base_Team: "Bengals",
     Opp: "Titans",
     Prediction: "Titans",
-    Level: "L2",
+    Level: "L0",
     Correct: 0
   },
   {
@@ -3145,7 +3320,7 @@ var total_predS = [
     Base_Team: "Chiefs",
     Opp: "Jets",
     Prediction: "Chiefs",
-    Level: "L2",
+    Level: "L0",
     Correct: 1
   },
   {
@@ -3190,7 +3365,7 @@ var total_predS = [
     Base_Team: "Packers",
     Opp: "Vikings",
     Prediction: "Packers",
-    Level: "L2",
+    Level: "L0",
     Correct: 0
   },
   {
@@ -3280,7 +3455,7 @@ var total_predS = [
     Base_Team: "Colts",
     Opp: "Ravens",
     Prediction: "Ravens",
-    Level: "L3",
+    Level: "L2",
     Correct: 1
   },
   {
@@ -3342,9 +3517,9 @@ var total_predS = [
     Week: 9,
     Base_Team: "Washington",
     Opp: "Giants",
-    Prediction: "Giants",
-    Level: "L1",
-    Correct: 1
+    Prediction: "Washington",
+    Level: "L2",
+    Correct: 0
   },
   {
     Year: 2020,
@@ -3451,7 +3626,7 @@ var total_predS = [
     Base_Team: "Saints",
     Opp: "49ers",
     Prediction: "Saints",
-    Level: "L2",
+    Level: "L0",
     Correct: 1
   },
   {
@@ -3748,8 +3923,8 @@ var total_predS = [
     Base_Team: "49ers",
     Opp: "Bills",
     Prediction: "Bills",
-    Level: "L1",
-    Correct: 0
+    Level: "L2",
+    Correct: 1
   },
   {
     Year: 2020,
@@ -3776,7 +3951,7 @@ var total_predS = [
     Opp: "Patriots",
     Prediction: "Patriots",
     Level: "L2",
-    Correct: 0
+    Correct: 1
   },
   {
     Year: 2020,
@@ -3785,7 +3960,7 @@ var total_predS = [
     Opp: "Broncos",
     Prediction: "Chiefs",
     Level: "L3",
-    Correct: 0
+    Correct: 1
   },
   {
     Year: 2020,
@@ -3794,7 +3969,7 @@ var total_predS = [
     Opp: "Bengals",
     Prediction: "Dolphins",
     Level: "L2",
-    Correct: 0
+    Correct: 1
   },
   {
     Year: 2020,
@@ -3803,7 +3978,7 @@ var total_predS = [
     Opp: "Saints",
     Prediction: "Saints",
     Level: "L2",
-    Correct: 0
+    Correct: 1
   },
   {
     Year: 2020,
@@ -3811,8 +3986,8 @@ var total_predS = [
     Base_Team: "Jets",
     Opp: "Raiders",
     Prediction: "Raiders",
-    Level: "L2",
-    Correct: 0
+    Level: "L3",
+    Correct: 1
   },
   {
     Year: 2020,
@@ -3821,7 +3996,7 @@ var total_predS = [
     Opp: "Eagles",
     Prediction: "Packers",
     Level: "L2",
-    Correct: 0
+    Correct: 1
   },
   {
     Year: 2020,
@@ -3829,8 +4004,8 @@ var total_predS = [
     Base_Team: "Ravens",
     Opp: "Cowboys",
     Prediction: "Ravens",
-    Level: "L2",
-    Correct: 0
+    Level: "L3",
+    Correct: 1
   },
   {
     Year: 2020,
@@ -3857,7 +4032,7 @@ var total_predS = [
     Opp: "Colts",
     Prediction: "Colts",
     Level: "L3",
-    Correct: 0
+    Correct: 1
   },
   {
     Year: 2020,
@@ -3866,7 +4041,7 @@ var total_predS = [
     Opp: "Browns",
     Prediction: "Browns",
     Level: "L0",
-    Correct: 0
+    Correct: 1
   },
   {
     Year: 2020,
@@ -3874,6 +4049,150 @@ var total_predS = [
     Base_Team: "Vikings",
     Opp: "Jaguars",
     Prediction: "Vikings",
+    Level: "L3",
+    Correct: 1
+  },
+  {
+    Year: 2020,
+    Week: 14,
+    Base_Team: "49ers",
+    Opp: "Washington",
+    Prediction: "49ers",
+    Level: "L2",
+    Correct: 0
+  },
+  {
+    Year: 2020,
+    Week: 14,
+    Base_Team: "Bears",
+    Opp: "Texans",
+    Prediction: "Bears",
+    Level: "L0",
+    Correct: 0
+  },
+  {
+    Year: 2020,
+    Week: 14,
+    Base_Team: "Bengals",
+    Opp: "Cowboys",
+    Prediction: "Bengals",
+    Level: "L0",
+    Correct: 0
+  },
+  {
+    Year: 2020,
+    Week: 14,
+    Base_Team: "Bills",
+    Opp: "Steelers",
+    Prediction: "Steelers",
+    Level: "L2",
+    Correct: 0
+  },
+  {
+    Year: 2020,
+    Week: 14,
+    Base_Team: "Browns",
+    Opp: "Ravens",
+    Prediction: "Browns",
+    Level: "L0",
+    Correct: 0
+  },
+  {
+    Year: 2020,
+    Week: 14,
+    Base_Team: "Buccaneers",
+    Opp: "Vikings",
+    Prediction: "Buccaneers",
+    Level: "L1",
+    Correct: 0
+  },
+  {
+    Year: 2020,
+    Week: 14,
+    Base_Team: "Chargers",
+    Opp: "Falcons",
+    Prediction: "Falcons",
+    Level: "L2",
+    Correct: 0
+  },
+  {
+    Year: 2020,
+    Week: 14,
+    Base_Team: "Dolphins",
+    Opp: "Chiefs",
+    Prediction: "Chiefs",
+    Level: "L2",
+    Correct: 0
+  },
+  {
+    Year: 2020,
+    Week: 14,
+    Base_Team: "Eagles",
+    Opp: "Saints",
+    Prediction: "Saints",
+    Level: "L3",
+    Correct: 0
+  },
+  {
+    Year: 2020,
+    Week: 14,
+    Base_Team: "Giants",
+    Opp: "Cardinals",
+    Prediction: "Cardinals",
+    Level: "L3",
+    Correct: 0
+  },
+  {
+    Year: 2020,
+    Week: 14,
+    Base_Team: "Jaguars",
+    Opp: "Titans",
+    Prediction: "Titans",
+    Level: "L3",
+    Correct: 0
+  },
+  {
+    Year: 2020,
+    Week: 14,
+    Base_Team: "Lions",
+    Opp: "Packers",
+    Prediction: "Packers",
+    Level: "L2",
+    Correct: 0
+  },
+  {
+    Year: 2020,
+    Week: 14,
+    Base_Team: "Panthers",
+    Opp: "Broncos",
+    Prediction: "Panthers",
+    Level: "L2",
+    Correct: 0
+  },
+  {
+    Year: 2020,
+    Week: 14,
+    Base_Team: "Raiders",
+    Opp: "Colts",
+    Prediction: "Colts",
+    Level: "L2",
+    Correct: 0
+  },
+  {
+    Year: 2020,
+    Week: 14,
+    Base_Team: "Rams",
+    Opp: "Patriots",
+    Prediction: "Rams",
+    Level: "L2",
+    Correct: 0
+  },
+  {
+    Year: 2020,
+    Week: 14,
+    Base_Team: "Seahawks",
+    Opp: "Jets",
+    Prediction: "Seahawks",
     Level: "L3",
     Correct: 0
   }
