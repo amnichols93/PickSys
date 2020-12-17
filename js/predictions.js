@@ -4475,8 +4475,8 @@ var total_predS = [
     Week: 15,
     Base_Team: "Ravens",
     Opp: "Jaguars",
-    Prediction: "Jaguars",
-    Level: "L2",
+    Prediction: "Ravens",
+    Level: "L0",
     Correct: 0
   },
   {
